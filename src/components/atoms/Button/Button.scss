@@ -1,0 +1,24 @@
+@import '../../../styles/variants/colors.scss';
+
+.btn {
+  color: $white;
+  background-color: $primary;
+  border: none;
+  font-size: 0.8rem;
+  padding: 15px 32px;
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover {
+    color: $primary;
+    background-color: $white;
+  }
+
+  &:focus,
+  &:active {
+    outline: 2px rgba($primary, 0.5);
+    outline-style: solid;
+    outline-offset: 2px;
+  }
+}
