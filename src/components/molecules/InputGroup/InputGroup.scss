@@ -1,0 +1,8 @@
+@import '../../../styles/variants/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
+
+.m-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
