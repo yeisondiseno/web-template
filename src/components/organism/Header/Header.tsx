@@ -9,9 +9,10 @@ const Header = () => {
     <header className='o-header max-block'>
       <div>Logo</div>
 
-      <Nav />
-
-      <HamburgerButton />
+      <div className='o-header-nav'>
+        <Nav />
+        <HamburgerButton />
+      </div>
     </header>
   );
 };

@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
+
       <section className='max-block'>
         <h1>
           ¡ELEVAREMOS TODO TU
