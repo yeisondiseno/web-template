@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 // Fonts
-import { Inter, Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 // Styles
 import '@styles/index.scss';
 
@@ -19,10 +20,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='es'>
       <body className={poppins.className}>{children}</body>
     </html>
   );
