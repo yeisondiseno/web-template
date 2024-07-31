@@ -1,0 +1,12 @@
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  &.light {
+    font-weight: 300;
+  }
+}
