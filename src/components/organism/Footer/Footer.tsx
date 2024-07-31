@@ -17,6 +17,7 @@ const Footer = () => {
             </p>
             <div>Social</div>
           </div>
+
           <div>
             <h2>Contacto</h2>
             <ul>
@@ -27,6 +28,7 @@ const Footer = () => {
               <li>almafitness.com.co</li>
             </ul>
           </div>
+
           <div>
             <h2>Horarios</h2>
             <ul>
@@ -41,6 +43,7 @@ const Footer = () => {
           </div>
         </section>
       </footer>
+
       <aside className='o-footer-aside'>
         <p className='light'>
           Derechos Reservados © 2024 ALMA Fitness Online - Todos los derechos
