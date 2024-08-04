@@ -1,13 +1,16 @@
 import React from 'react';
+import Link from 'next/link';
 // Components
-import { HamburgerButton, Nav } from '@/components/molecules';
+import { HamburgerButton, Nav, LogoIcon } from '@/components/';
 // Styles
 import './Header.scss';
 
 const Header = () => {
   return (
     <header className='o-header max-block'>
-      <div>Logo</div>
+      <Link href='./'>
+        <LogoIcon width={241} />
+      </Link>
 
       <div className='o-header-nav'>
         <Nav />

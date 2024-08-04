@@ -3,6 +3,7 @@
 .o-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-top: 5.625rem;
 
   &-nav {
