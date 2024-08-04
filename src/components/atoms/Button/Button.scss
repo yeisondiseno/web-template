@@ -1,0 +1,23 @@
+@import '../../../styles/variables/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
+
+.a-btn {
+  color: $white;
+  background-color: $primary;
+  border: none;
+  font-size: 0.8rem;
+  padding: 15px 32px;
+  cursor: pointer;
+
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+    background-color: $white;
+  }
+
+  &:focus,
+  &:active {
+    @include out-line;
+  }
+}

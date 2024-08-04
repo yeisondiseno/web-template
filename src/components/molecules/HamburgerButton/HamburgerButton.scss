@@ -1,0 +1,33 @@
+@import '../../../styles/variables/index.scss';
+
+.m-hamburger-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 2.375rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: $transition;
+
+  & > span {
+    width: 100%;
+    background-color: $white;
+    height: 0.1875rem;
+    border-radius: 3px;
+    transition: $transition;
+  }
+
+  &-1 {
+    max-width: 1.625rem;
+  }
+
+  &-2 {
+    max-width: 0.8125rem;
+  }
+
+  &:hover span {
+    max-width: 100%;
+  }
+}

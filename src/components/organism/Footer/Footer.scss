@@ -1,0 +1,33 @@
+@import '../../../styles/variables/index.scss';
+
+.o-footer {
+  background-color: $gray-9;
+
+  &-content {
+    display: flex;
+    gap: 6.25rem;
+    padding-top: 5.6875rem;
+    padding-bottom: 7.1875rem;
+
+    & > div {
+      max-width: 29rem;
+    }
+    & ul {
+      text-decoration: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    & li {
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &-aside {
+    text-align: center;
+    background-color: $black;
+    padding: 1.25rem 0;
+  }
+}

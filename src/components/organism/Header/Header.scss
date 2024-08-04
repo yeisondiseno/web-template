@@ -1,0 +1,13 @@
+@import '../../../styles/variables/index.scss';
+
+.o-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.625rem;
+
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 12.3125rem;
+  }
+}
