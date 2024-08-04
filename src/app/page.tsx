@@ -1,21 +1,26 @@
-import { useState } from 'react';
 // Components
-import { Button, Input, InputGroup, Header, Footer } from '@/components';
+import { Header, Footer } from '@/components';
+// Assets
 // Styles
-import styles from './page.module.scss';
+import './page.scss';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className='home'>
       <Header />
 
-      <section className='max-block'>
-        <h1>
-          ¡ELEVAREMOS TODO TU
-          <br />
-          <span>POTENCIAL!</span>
-        </h1>
-        <h3>CONTIANZA, SEGURIDAD Y SALUD</h3>
+      <section
+        className='home-first max-block'
+        style={{ backgroundImage: `url('/assets/img/home_first.png')` }}
+      >
+        <div className='home-first-content'>
+          <h1>
+            ¡ELEVAREMOS TODO TU
+            <br />
+            <span className='home-first-title-big'>POTENCIAL!</span>
+          </h1>
+          <h3 className='font-border pink'>CONTIANZA, SEGURIDAD Y SALUD</h3>
+        </div>
       </section>
 
       <Footer />

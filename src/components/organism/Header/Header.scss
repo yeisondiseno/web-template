@@ -1,6 +1,7 @@
 @import '../../../styles/variables/index.scss';
 
 .o-header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
