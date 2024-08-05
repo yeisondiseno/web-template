@@ -2,10 +2,15 @@
 
 .o-header {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   margin-top: 5.625rem;
+
+  width: 100%;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
   &-nav {
     display: flex;

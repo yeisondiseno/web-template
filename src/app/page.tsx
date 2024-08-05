@@ -1,8 +1,24 @@
+import React from 'react';
+import Image from 'next/image';
 // Components
 import { Header, Footer } from '@/components';
-// Assets
 // Styles
 import './page.scss';
+
+const secondSectionCard = [
+  {
+    label: 'ALMA Metodo',
+    img: '/assets/img/home_1.png',
+  },
+  {
+    label: 'ALMA Online',
+    img: '/assets/img/home_2.png',
+  },
+  {
+    label: 'Nutrición',
+    img: '/assets/img/home_3.png',
+  },
+];
 
 export default function Home() {
   return (
@@ -21,6 +37,22 @@ export default function Home() {
           </h1>
           <h3 className='font-border pink'>CONTIANZA, SEGURIDAD Y SALUD</h3>
         </div>
+      </section>
+
+      <section className='home-second max-block'>
+        {secondSectionCard.map(({ label, img }) => (
+          <aside key={label} className='home-second-card'>
+            <Image
+              src={img}
+              alt={label}
+              width={677}
+              height={450}
+              className='home-second-card-img'
+            />
+            <div className='home-second-card-filter' />
+            <p>{label}</p>
+          </aside>
+        ))}
       </section>
 
       <Footer />

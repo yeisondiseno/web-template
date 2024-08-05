@@ -7,14 +7,16 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <header className='o-header max-block'>
-      <Link href='./'>
-        <LogoIcon width={241} />
-      </Link>
+    <header className='o-header'>
+      <div className='o-header-container max-block'>
+        <Link href='./'>
+          <LogoIcon width={241} />
+        </Link>
 
-      <div className='o-header-nav'>
-        <Nav />
-        <HamburgerButton />
+        <div className='o-header-nav'>
+          <Nav />
+          <HamburgerButton />
+        </div>
       </div>
     </header>
   );
