@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import { Header, Footer } from '@/components';
+import { Header, Footer, Divider } from '@/components';
 // Styles
 import './page.scss';
 
@@ -54,23 +54,27 @@ export default function Home() {
         ))}
       </section>
 
-      <section className='home-third max-block'>
-        <div>
-          <h2 className='home-third-title'>Nosotros</h2>
-          <h3 className='home-third-sub-title'>ESPACIO INTEGRAL</h3>
-          <p className='home-third-text'>
-            ¡ALMA es para todas las mujeres, no importa tu nivel deportivo o
-            condición física, lo importante es tu superación, tu salud y enfoque
-            de resto déjalo en nuestras manos para guiarte en lo deportivo,
-            nutricional y mucho mas!
-          </p>
-        </div>
-        <div
-          className='home-third-right'
-          style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
-        >
-          <h3 className='font-border'>ELEVA TU POTENCIAL</h3>
-        </div>
+      <section className='home-third '>
+        <article className='home-third-container max-block'>
+          <div>
+            <h2 className='home-third-title'>Nosotros</h2>
+            <h3 className='home-third-sub-title'>ESPACIO INTEGRAL</h3>
+            <p className='home-third-text'>
+              ¡ALMA es para todas las mujeres, no importa tu nivel deportivo o
+              condición física, lo importante es tu superación, tu salud y
+              enfoque de resto déjalo en nuestras manos para guiarte en lo
+              deportivo, nutricional y mucho mas!
+            </p>
+          </div>
+          <div
+            className='home-third-right'
+            style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
+          >
+            <h3 className='font-border'>ELEVA TU POTENCIAL</h3>
+          </div>
+        </article>
+
+        <Divider className='home-third-divider' />
       </section>
 
       <Footer />
