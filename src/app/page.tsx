@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import { Header, Footer, Divider } from '@/components';
+import { Header, Footer, Divider, Button } from '@/components';
 // Styles
 import './page.scss';
 
@@ -75,6 +75,13 @@ export default function Home() {
         </article>
 
         <Divider className='home-third-divider' />
+      </section>
+      <section className='home-forth max-block'>
+        <h3 className='italic light'>CONOCE Y VIVE</h3>
+        <h3>LA EXPERIECIA AMLA</h3>
+        <Button className='home-forth-button' width='fit'>
+          RESERVA TU CLASE
+        </Button>
       </section>
 
       <Footer />
