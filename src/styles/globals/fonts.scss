@@ -4,20 +4,33 @@ h2 {
   font-size: 1.75rem;
 }
 
+h3 {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+h2,
+h3,
+p {
+  &.italic {
+    font-style: italic;
+  }
 
   &.light {
     font-weight: 300;
   }
-}
 
-.font-border {
-  color: transparent;
-  -webkit-text-stroke: 1px $white;
+  &.font-border {
+    color: transparent;
+    -webkit-text-stroke: 1px $white;
 
-  &.pink {
-    -webkit-text-stroke-color: $third;
+    &.pink {
+      -webkit-text-stroke-color: $third;
+    }
   }
 }

@@ -112,4 +112,19 @@
       right: 0;
     }
   }
+
+  &-forth {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    color: $black;
+
+    h3 {
+      font-size: 63px;
+    }
+
+    &-button {
+      margin-top: 2rem;
+    }
+  }
 }

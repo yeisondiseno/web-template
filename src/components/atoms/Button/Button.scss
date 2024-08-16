@@ -5,8 +5,10 @@
   color: $white;
   background-color: $primary;
   border: none;
+  border-radius: 0.3125rem;
   font-size: 0.8rem;
   padding: 15px 32px;
+  box-shadow: $shadow;
   cursor: pointer;
 
   transition: $transition;
@@ -19,5 +21,13 @@
   &:focus,
   &:active {
     @include out-line;
+  }
+
+  &.fit {
+    width: fit-content;
+  }
+
+  &.full {
+    width: 100%;
   }
 }
