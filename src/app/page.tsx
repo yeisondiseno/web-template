@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import { Header, Footer, Divider, Button } from '@/components';
+import { Header, Footer, Divider, Button } from '@components/index';
+import { Carousel } from '@/module/index';
 // Styles
 import './page.scss';
 
@@ -76,12 +77,37 @@ export default function Home() {
 
         <Divider className='home-third-divider' />
       </section>
-      <section className='home-forth max-block'>
-        <h3 className='italic light'>CONOCE Y VIVE</h3>
-        <h3>LA EXPERIECIA AMLA</h3>
-        <Button className='home-forth-button' width='fit'>
-          RESERVA TU CLASE
-        </Button>
+      <section className='home-forth '>
+        <div className='home-forth-content max-block'>
+          <h3 className='italic light'>CONOCE Y VIVE</h3>
+          <h3>LA EXPERIECIA AMLA</h3>
+          <Button className='home-forth-button' width='fit'>
+            RESERVA TU CLASE
+          </Button>
+          <Carousel>
+            <Image
+              src={'/assets/img/home_first.png'}
+              alt={'label'}
+              width={677}
+              height={450}
+              className='home-second-card-img'
+            />
+            <Image
+              src={'/assets/img/home_first.png'}
+              alt={'label'}
+              width={677}
+              height={450}
+              className='home-second-card-img'
+            />
+            <Image
+              src={'/assets/img/home_first.png'}
+              alt={'label'}
+              width={677}
+              height={450}
+              className='home-second-card-img'
+            />
+          </Carousel>
+        </div>
       </section>
 
       <Footer />
