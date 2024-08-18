@@ -14,7 +14,7 @@ const MainCardSection = () => {
             src={img}
             alt={label}
             width={677}
-            height={450}
+            height={290}
             className='module-home-main-card-card-img'
           />
           <p>{label}</p>
