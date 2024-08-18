@@ -1,23 +1,4 @@
 @import '../styles/variables/index.scss';
 
 .home {
-  &-forth {
-    background-color: $white;
-    color: $black;
-    padding-bottom: 7.5rem;
-
-    &-content {
-      display: flex;
-      flex-direction: column;
-    }
-
-    h3 {
-      font-size: 63px;
-    }
-
-    &-button {
-      margin-top: 2rem;
-      margin-bottom: 4rem;
-    }
-  }
 }
