@@ -1,0 +1,50 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-home-about-us {
+  position: relative;
+  overflow: hidden;
+
+  &-container {
+    display: flex;
+  }
+
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80%;
+    padding: 9.375rem 0;
+
+    h3 {
+      font-size: 5.8125rem;
+      width: min-content;
+    }
+  }
+
+  &-title {
+    font-style: italic;
+    font-size: 3.5625rem;
+    border-bottom: solid 1px $primary;
+    font-weight: 400;
+    width: fit-content;
+  }
+
+  &-sub-title {
+    font-size: 3.5625rem;
+    font-weight: 900;
+  }
+
+  &-text {
+    max-width: 43.125rem;
+  }
+
+  &-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

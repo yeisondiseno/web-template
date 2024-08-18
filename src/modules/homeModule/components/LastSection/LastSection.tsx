@@ -30,7 +30,7 @@ const LastSection = () => {
   return (
     <section className='module-home-last max-block'>
       {listCards.map(({ img, title, subTitle }) => (
-        <div key={title} className='module-home-last-card'>
+        <aside key={title} className='module-home-last-card'>
           <Image
             src={img}
             alt={title}
@@ -42,7 +42,7 @@ const LastSection = () => {
             <h2 className='bold'>{title}</h2>
             <h5>{subTitle}</h5>
           </div>
-        </div>
+        </aside>
       ))}
     </section>
   );
