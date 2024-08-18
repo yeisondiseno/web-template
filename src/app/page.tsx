@@ -13,9 +13,7 @@ import './page.scss';
 
 export default function Home() {
   return (
-    <main className='home'>
-      <Header />
-
+    <>
       <section
         className='home-first max-block'
         style={{ backgroundImage: `url('/assets/img/home_first.png')` }}
@@ -90,8 +88,6 @@ export default function Home() {
       </section>
       <FormSection />
       <LastSection />
-
-      <Footer />
-    </main>
+    </>
   );
 }
