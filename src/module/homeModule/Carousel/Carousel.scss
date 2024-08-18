@@ -1,15 +1,16 @@
 .carousel {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .embla {
-  width: 100%;
+  width: 90%;
   margin: auto;
   --slide-height: 29.8125rem;
   --slide-spacing: 0rem;
-  --slide-size: 33%;
+  --slide-size: 33.333%;
 }
 .embla__viewport {
   overflow: hidden;
@@ -24,6 +25,7 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+  overflow: hidden;
 }
 .embla__slide__number {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);

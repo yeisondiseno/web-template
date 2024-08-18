@@ -86,25 +86,46 @@ export default function Home() {
           </Button>
           <Carousel>
             <Image
-              src={'/assets/img/home_first.png'}
+              src={'/assets/img/slide-1.png'}
               alt={'label'}
-              width={677}
-              height={450}
-              className='home-second-card-img'
+              width={528}
+              height={693}
+              objectFit='fit'
             />
             <Image
-              src={'/assets/img/home_first.png'}
+              src={'/assets/img/slide-2.png'}
               alt={'label'}
-              width={677}
-              height={450}
-              className='home-second-card-img'
+              width={528}
+              height={693}
+              objectFit='fit'
             />
             <Image
-              src={'/assets/img/home_first.png'}
+              src={'/assets/img/slide-3.png'}
               alt={'label'}
-              width={677}
-              height={450}
-              className='home-second-card-img'
+              width={528}
+              height={693}
+              objectFit='fit'
+            />
+            <Image
+              src={'/assets/img/slide-1.png'}
+              alt={'label'}
+              width={528}
+              height={693}
+              objectFit='fit'
+            />
+            <Image
+              src={'/assets/img/slide-2.png'}
+              alt={'label'}
+              width={528}
+              height={693}
+              objectFit='fit'
+            />
+            <Image
+              src={'/assets/img/slide-3.png'}
+              alt={'label'}
+              width={528}
+              height={693}
+              objectFit='fit'
             />
           </Carousel>
         </div>

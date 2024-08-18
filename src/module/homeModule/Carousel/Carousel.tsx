@@ -1,5 +1,5 @@
 'use client';
-import React, { Children, ReactNode } from 'react';
+import React, { Children, ReactNode, useMemo } from 'react';
 // Libraries
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -19,14 +19,19 @@ import './Carousel.scss';
 type CarouselType = {
   children: ReactNode;
   options?: EmblaOptionsType;
+  slidesToShow?: number;
 };
 
-const Carousel = ({ children, options }: CarouselType) => {
+const Carousel = ({ children, options, slidesToShow }: CarouselType) => {
+  // Data
+  const showSlide = useMemo(() => {
+    const divided = 100 / (slidesToShow ?? 1);
+
+    return `${divided}%;`;
+  }, [slidesToShow]);
+
+  // Hooks
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -37,7 +42,7 @@ const Carousel = ({ children, options }: CarouselType) => {
   return (
     <section className='carousel'>
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <section className='embla'>
+      <section className={`embla `}>
         <div className='embla__viewport' ref={emblaRef}>
           <div className='embla__container'>
             {Children.map(children, (child, index) => (
