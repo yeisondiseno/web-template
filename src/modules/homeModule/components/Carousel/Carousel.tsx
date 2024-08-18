@@ -9,7 +9,7 @@ import {
   NextButton,
   usePrevNextButtons,
 } from './CarrouselArrowButtons';
-import { useDotButton } from './CarrouselDots';
+// import { useDotButton } from './CarrouselDots';
 // Styles
 import './Carousel.scss';
 
@@ -20,15 +20,26 @@ type CarouselType = {
   children: ReactNode;
   options?: EmblaOptionsType;
   slidesToShow?: number;
+  height?: number;
+  spacing?: number;
 };
 
-const Carousel = ({ children, options, slidesToShow }: CarouselType) => {
+const Carousel = ({
+  children,
+  options,
+  slidesToShow,
+  height,
+  spacing,
+}: CarouselType) => {
   // Data
   const showSlide = useMemo(() => {
     const divided = 100 / (slidesToShow ?? 1);
-
     return `${divided}%;`;
   }, [slidesToShow]);
+
+  const handledHeight = useMemo(() => height ?? 'auto', [height]);
+
+  const handledSpacing = useMemo(() => spacing ?? 0, [spacing]);
 
   // Hooks
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -44,10 +55,22 @@ const Carousel = ({ children, options, slidesToShow }: CarouselType) => {
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       <section className={`embla `}>
         <div className='embla__viewport' ref={emblaRef}>
-          <div className='embla__container'>
+          <div
+            className='embla__container'
+            style={{ gap: `${handledSpacing}px` }}
+          >
             {Children.map(children, (child, index) => (
-              <div className='embla__slide' key={index}>
-                <div className='embla__slide__number'>{child}</div>
+              <div
+                className='embla__slide'
+                key={index}
+                style={{ flex: ` 0 0 ${showSlide}` }}
+              >
+                <div
+                  className='embla__slide__number'
+                  style={{ height: `${handledHeight}px` }}
+                >
+                  {child}
+                </div>
               </div>
             ))}
           </div>

@@ -2,24 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 // Components
 import { Header, Footer, Divider, Button } from '@components/index';
-import { Carousel } from '@/module/index';
+import { Carousel, FormSection } from '@modules/homeModule/components/index';
+// Constant
+import {
+  secondSectionCard,
+  carrouselList,
+} from '@modules/homeModule/constants/homeConstants';
 // Styles
 import './page.scss';
-
-const secondSectionCard = [
-  {
-    label: 'ALMA Metodo',
-    img: '/assets/img/home_1.png',
-  },
-  {
-    label: 'ALMA Online',
-    img: '/assets/img/home_2.png',
-  },
-  {
-    label: 'Nutrición',
-    img: '/assets/img/home_3.png',
-  },
-];
 
 export default function Home() {
   return (
@@ -84,52 +74,21 @@ export default function Home() {
           <Button className='home-forth-button' width='fit'>
             RESERVA TU CLASE
           </Button>
-          <Carousel>
-            <Image
-              src={'/assets/img/slide-1.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
-            <Image
-              src={'/assets/img/slide-2.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
-            <Image
-              src={'/assets/img/slide-3.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
-            <Image
-              src={'/assets/img/slide-1.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
-            <Image
-              src={'/assets/img/slide-2.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
-            <Image
-              src={'/assets/img/slide-3.png'}
-              alt={'label'}
-              width={528}
-              height={693}
-              objectFit='fit'
-            />
+          <Carousel slidesToShow={3} height={477}>
+            {carrouselList.map(({ src, alt }) => (
+              <Image
+                key={src + alt}
+                src={src}
+                alt={alt}
+                width={528}
+                height={693}
+                objectFit='fit'
+              />
+            ))}
           </Carousel>
         </div>
       </section>
+      <FormSection />
 
       <Footer />
     </main>
