@@ -9,7 +9,6 @@ import {
   NextButton,
   usePrevNextButtons,
 } from './CarrouselArrowButtons';
-// import { useDotButton } from './CarrouselDots';
 // Styles
 import './Carousel.scss';
 
@@ -51,22 +50,22 @@ const Carousel = ({
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className='carousel'>
+    <section className='m-carousel'>
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <section className={`embla `}>
-        <div className='embla__viewport' ref={emblaRef}>
+      <section className={`m-carousel-embla `}>
+        <div className='m-carousel-embla__viewport' ref={emblaRef}>
           <div
-            className='embla__container'
+            className='m-carousel-embla__container'
             style={{ gap: `${handledSpacing}px` }}
           >
             {Children.map(children, (child, index) => (
               <div
-                className='embla__slide'
+                className='m-carousel-embla__slide'
                 key={index}
                 style={{ flex: ` 0 0 ${showSlide}` }}
               >
                 <div
-                  className='embla__slide__number'
+                  className='m-carousel-embla__slide__number'
                   style={{ height: `${handledHeight}px` }}
                 >
                   {child}

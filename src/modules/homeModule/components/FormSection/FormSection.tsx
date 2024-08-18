@@ -17,10 +17,8 @@ const FormSection = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    // formState: { errors },
   } = useForm<InputsType>();
-  const all = watch();
 
   // Actions
   const onSubmit: SubmitHandler<InputsType> = (data) => console.log(data);

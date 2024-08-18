@@ -1,2 +1,2 @@
-export { default as Carousel } from './Carousel/Carousel';
 export { default as FormSection } from './FormSection/FormSection';
+export { default as LastSection } from './LastSection/LastSection';

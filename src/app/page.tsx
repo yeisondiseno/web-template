@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import { Header, Footer, Divider, Button } from '@components/index';
-import { Carousel, FormSection } from '@modules/homeModule/components/index';
+import { Header, Footer, Divider, Button, Carousel } from '@components/index';
+import { FormSection, LastSection } from '@modules/homeModule/components/index';
 // Constant
 import {
   secondSectionCard,
@@ -89,6 +89,7 @@ export default function Home() {
         </div>
       </section>
       <FormSection />
+      <LastSection />
 
       <Footer />
     </main>
