@@ -5,11 +5,11 @@ import './HeroSection.scss';
 const HeroSection = () => {
   return (
     <section
-      className='module-home-hero max-block'
+      className='module-home-hero'
       style={{ backgroundImage: `url('/assets/img/home_first.png')` }}
     >
-      <div className='module-home-hero-content'>
-        <h1>
+      <div className='max-block'>
+        <h1 className='black'>
           ¡ELEVAREMOS TODO TU
           <br />
           <span className='module-home-hero-title-big'>POTENCIAL!</span>

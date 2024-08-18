@@ -25,6 +25,14 @@ p {
     font-weight: 300;
   }
 
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.black {
+    font-weight: 900;
+  }
+
   &.font-border {
     color: transparent;
     -webkit-text-stroke: 1px $white;

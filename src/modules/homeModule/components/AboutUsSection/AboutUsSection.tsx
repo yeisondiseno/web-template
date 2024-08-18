@@ -22,7 +22,7 @@ const AboutUsSection = () => {
           className='module-home-about-us-right'
           style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
         >
-          <h3 className='font-border'>ELEVA TU POTENCIAL</h3>
+          <h3 className='font-border black'>ELEVA TU POTENCIAL</h3>
         </div>
       </article>
 

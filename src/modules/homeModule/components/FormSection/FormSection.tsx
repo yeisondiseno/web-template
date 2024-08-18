@@ -25,31 +25,33 @@ const FormSection = () => {
 
   return (
     <section
-      className='module-home-form max-block'
+      className='module-home-form'
       style={{ backgroundImage: `url('/assets/img/home-form.png')` }}
     >
       <div className='module-home-form-cover' />
-      <div className='module-home-form-content'>
-        <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className='module-home-form-form'
-        >
-          <Input
-            placeholder='Ingrese su nombre completo'
-            {...register('name', { required: true })}
-          />
-          <Input
-            placeholder='Ingrese su correo'
-            {...register('email', { required: true })}
-          />
-          <Input
-            placeholder='Ingrese su celular'
-            type='number'
-            {...register('phone', { required: true })}
-          />
-          <Button type='submit'>ENVIAR</Button>
-        </form>
+      <div className='module-home-form-module max-block'>
+        <div className='module-home-form-content'>
+          <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className='module-home-form-form'
+          >
+            <Input
+              placeholder='Ingrese su nombre completo'
+              {...register('name', { required: true })}
+            />
+            <Input
+              placeholder='Ingrese su correo'
+              {...register('email', { required: true })}
+            />
+            <Input
+              placeholder='Ingrese su celular'
+              type='number'
+              {...register('phone', { required: true })}
+            />
+            <Button type='submit'>ENVIAR</Button>
+          </form>
+        </div>
       </div>
     </section>
   );
