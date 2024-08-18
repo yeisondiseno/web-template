@@ -1,24 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import { Header, Footer, Divider } from '@/components';
+import { Header, Footer, Divider, Button, Carousel } from '@components/index';
+import { FormSection, LastSection } from '@modules/homeModule/components/index';
+// Constant
+import {
+  secondSectionCard,
+  carrouselList,
+} from '@modules/homeModule/constants/homeConstants';
 // Styles
 import './page.scss';
-
-const secondSectionCard = [
-  {
-    label: 'ALMA Metodo',
-    img: '/assets/img/home_1.png',
-  },
-  {
-    label: 'ALMA Online',
-    img: '/assets/img/home_2.png',
-  },
-  {
-    label: 'Nutrición',
-    img: '/assets/img/home_3.png',
-  },
-];
 
 export default function Home() {
   return (
@@ -76,6 +67,29 @@ export default function Home() {
 
         <Divider className='home-third-divider' />
       </section>
+      <section className='home-forth '>
+        <div className='home-forth-content max-block'>
+          <h3 className='italic light'>CONOCE Y VIVE</h3>
+          <h3>LA EXPERIECIA AMLA</h3>
+          <Button className='home-forth-button' width='fit'>
+            RESERVA TU CLASE
+          </Button>
+          <Carousel slidesToShow={3} height={477}>
+            {carrouselList.map(({ src, alt }) => (
+              <Image
+                key={src + alt}
+                src={src}
+                alt={alt}
+                width={528}
+                height={693}
+                objectFit='fit'
+              />
+            ))}
+          </Carousel>
+        </div>
+      </section>
+      <FormSection />
+      <LastSection />
 
       <Footer />
     </main>

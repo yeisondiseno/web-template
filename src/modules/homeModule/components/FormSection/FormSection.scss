@@ -1,0 +1,43 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-home-form {
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  justify-content: flex-end;
+  background-position: top left;
+  padding-top: 21.1875rem;
+  padding-bottom: 5.9375rem;
+  background-size: contain;
+
+  h2 {
+    font-size: 36px;
+  }
+
+  &-cover {
+    position: absolute;
+    inset: 0;
+    background: $black;
+    background: linear-gradient(
+      270deg,
+      rgba($black, 1) 0%,
+      rgba($black, 1) 40%,
+      rgba($black, 0) 65%
+    );
+  }
+
+  &-content {
+    z-index: 1;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-width: 25.8125rem;
+
+    & > button {
+      margin-top: 0.625rem;
+    }
+  }
+}
