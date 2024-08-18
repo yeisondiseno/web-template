@@ -12,7 +12,7 @@ const Footer = () => {
         <section className='o-footer-content max-block'>
           <div>
             <Link href='./' className='o-footer-link'>
-              <LogoIcon width={465} />
+              <LogoIcon width={327} />
             </Link>
             <p className='light'>
               ALMA es para todas las mujeres, no importa tu nivel deportivo o

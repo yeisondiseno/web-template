@@ -1,8 +1,9 @@
 @import '../../../styles/variables/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
 
 .o-header {
   position: absolute;
-  margin-top: 5.625rem;
+  margin-top: 2.5rem;
 
   width: 100%;
   z-index: 1;
@@ -17,5 +18,9 @@
     display: flex;
     flex-direction: row;
     gap: 12.3125rem;
+
+    @include responsive(desktop) {
+      gap: 0;
+    }
   }
 }

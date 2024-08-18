@@ -1,0 +1,31 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-home-main-card {
+  display: flex;
+  margin-top: -8.0625rem;
+  margin-bottom: 10rem;
+  padding: 0 90px;
+
+  &-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    height: 423px;
+
+    &-img {
+      position: absolute;
+      padding: 11.25rem 0;
+      width: 100%;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 2.6875rem;
+      text-shadow: $text-shadow;
+      z-index: 1;
+    }
+  }
+}

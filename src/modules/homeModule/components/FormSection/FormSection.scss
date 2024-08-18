@@ -2,13 +2,16 @@
 
 .module-home-form {
   position: relative;
-  display: flex;
   background-repeat: no-repeat;
-  justify-content: flex-end;
   background-position: top left;
   padding-top: 21.1875rem;
   padding-bottom: 5.9375rem;
   background-size: contain;
+
+  &-module {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   h2 {
     font-size: 36px;
@@ -17,12 +20,12 @@
   &-cover {
     position: absolute;
     inset: 0;
-    background: $black;
+    background: $bg;
     background: linear-gradient(
       270deg,
-      rgba($black, 1) 0%,
-      rgba($black, 1) 40%,
-      rgba($black, 0) 65%
+      rgba($bg, 1) 0%,
+      rgba($bg, 1) 40%,
+      rgba($bg, 0) 65%
     );
   }
 

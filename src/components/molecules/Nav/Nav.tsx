@@ -11,15 +11,15 @@ const navList = [
   },
   {
     label: 'ALMA Online',
-    href: './',
+    href: './online',
   },
   {
     label: 'Nutrición ',
-    href: './',
+    href: './nutricion',
   },
   {
     label: 'Contacto',
-    href: './',
+    href: './contacto',
   },
 ];
 
@@ -32,7 +32,7 @@ const Nav = () => {
             <li key={label}>
               <Link href={href}>
                 {label}
-                <span className='m-nav-ul-mark' />
+                <span className={`m-nav-ul-mark `} />
               </Link>
             </li>
           ))}

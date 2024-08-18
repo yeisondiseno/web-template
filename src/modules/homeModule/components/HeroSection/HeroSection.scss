@@ -1,0 +1,31 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-home-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 47.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 3.75rem;
+    margin-top: 0;
+    color: transparent;
+  }
+
+  &-title-big {
+    font-size: 6.25rem;
+    text-shadow: $text-shadow;
+  }
+}
