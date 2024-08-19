@@ -1,0 +1,50 @@
+@import '../../../styles/variables/index.scss';
+
+.m-slide {
+  position: fixed;
+  top: 0;
+  right: -34.375rem;
+  bottom: 0;
+  z-index: 10;
+  background-color: $bg-slide;
+  width: 100%;
+  max-width: 30.5625rem;
+  padding: 5.625rem 2.625rem 2.625rem 2.625rem;
+
+  overflow-y: auto;
+
+  animation: slide 0.5s forwards;
+
+  &-close {
+    position: fixed;
+    right: 2.625rem;
+    top: 2.4375rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2.1875rem;
+    padding: 0.5rem;
+    color: $gray-3;
+    transition: 0.3s;
+    opacity: 0;
+
+    cursor: pointer;
+    animation: slide-button 0.5s forwards;
+    animation-delay: 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-button {
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OnlinePage = () => {
-  return <div>Nutrition Page</div>;
+  return <div>OnlinePage Page</div>;
 };
 
 export default OnlinePage;
