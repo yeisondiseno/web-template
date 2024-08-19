@@ -1,4 +1,5 @@
 @import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
 
 .module-home-about-us {
   position: relative;
@@ -6,6 +7,10 @@
 
   &-container {
     display: flex;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
   }
 
   &-right {
@@ -16,12 +21,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80%;
-    padding: 9.375rem 0;
+    padding: 12.5rem 0;
+
+    @include responsive(tablet) {
+      width: 100%;
+      justify-content: flex-end;
+      padding: 9.375rem 0;
+    }
 
     h3 {
       font-size: 5.8125rem;
       width: min-content;
-      line-height: 5rem;
+      line-height: 1;
+
+      @include responsive(desktop) {
+        font-size: 2.5rem;
+      }
+
+      @include responsive(tablet) {
+        font-size: 2.25rem;
+      }
     }
   }
 
@@ -31,11 +50,20 @@
     border-bottom: solid 1px $primary;
     font-weight: 400;
     width: fit-content;
+
+    @include responsive(tablet) {
+      font-size: 1.5rem;
+    }
   }
 
   &-sub-title {
     font-size: 3.5625rem;
     font-weight: 900;
+
+    @include responsive(tablet) {
+      font-size: 1.5rem;
+      margin-bottom: 0.875rem;
+    }
   }
 
   &-text {
@@ -47,5 +75,9 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    @include responsive(tablet) {
+      display: none;
+    }
   }
 }

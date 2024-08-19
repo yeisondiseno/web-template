@@ -8,6 +8,12 @@
   width: 100%;
   z-index: 1;
 
+  @include responsive(mobile) {
+    margin-top: 0;
+    padding: 1rem 0;
+    background-color: $bg-slide;
+  }
+
   &-container {
     display: flex;
     justify-content: space-between;

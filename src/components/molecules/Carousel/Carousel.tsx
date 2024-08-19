@@ -1,8 +1,10 @@
 'use client';
-import React, { Children, ReactNode, useMemo } from 'react';
+import React, { Children, ReactNode, useMemo, useCallback } from 'react';
 // Libraries
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
+// Hooks
+import { useViewportSize } from '@hooks/index';
 // Components
 import {
   PrevButton,
@@ -18,7 +20,11 @@ import './Carousel.scss';
 type CarouselType = {
   children: ReactNode;
   options?: EmblaOptionsType;
-  slidesToShow?: number;
+  slidesToShow?: {
+    mobile: number;
+    tablet: number;
+    desktop: number;
+  };
   height?: number;
   spacing?: number;
 };
@@ -30,24 +36,30 @@ const Carousel = ({
   height,
   spacing,
 }: CarouselType) => {
-  // Data
-  const showSlide = useMemo(() => {
-    const divided = 100 / (slidesToShow ?? 1);
-    return `${divided}%;`;
-  }, [slidesToShow]);
-
-  const handledHeight = useMemo(() => height ?? 'auto', [height]);
-
-  const handledSpacing = useMemo(() => spacing ?? 0, [spacing]);
-
   // Hooks
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const { mobile, tablet } = useViewportSize();
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
+
+  // Data
+  const showSlide = useMemo(() => {
+    const viewport = () => {
+      if (mobile) return slidesToShow?.mobile;
+      if (tablet) return slidesToShow?.tablet;
+      return slidesToShow?.desktop;
+    };
+
+    return 100 / (viewport() ?? 1);
+  }, [mobile, tablet, slidesToShow]);
+
+  const handledHeight = useMemo(() => height ?? 'auto', [height]);
+  const handledSpacing = useMemo(() => spacing ?? 0, [spacing]);
 
   return (
     <section className='m-carousel'>
@@ -62,7 +74,7 @@ const Carousel = ({
               <div
                 className='m-carousel-embla__slide'
                 key={index}
-                style={{ flex: ` 0 0 ${showSlide}` }}
+                style={{ flex: ` 0 0 ${showSlide}%` }}
               >
                 <div
                   className='m-carousel-embla__slide__number'
