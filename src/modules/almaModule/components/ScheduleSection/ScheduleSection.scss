@@ -1,0 +1,11 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-alma-schedule {
+  padding-top: 1.875rem;
+  padding-bottom: 2rem;
+  color: $black;
+
+  &-text {
+    margin-bottom: 2.5rem;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../styles/variables/index.scss';
+
+.m-table {
+  width: 100%;
+  border-spacing: 0;
+
+  &-head {
+    background-color: $primary;
+    color: $white;
+
+    & tr th {
+      padding: 0.9375rem 0;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+
+  &-body tr {
+    background-color: $gray-7;
+    transition: 0.3s;
+
+    th {
+      color: $white;
+      padding: 0.9375rem 0;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background-color: $gray-6;
+    }
+  }
+}
