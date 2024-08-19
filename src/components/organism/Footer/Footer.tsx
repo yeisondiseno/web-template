@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 // Components
-import { LogoIcon } from '@/components/index';
+import { LogoIcon, SocialList } from '@/components/index';
 // Styles
 import './Footer.scss';
 
@@ -20,7 +20,7 @@ const Footer = () => {
               enfoque de resto déjalo en nuestras manos para guiarte en lo
               deportivo, nutricional y mucho mas.
             </p>
-            <div>Social</div>
+            <SocialList className='o-footer-social' />
           </div>
 
           <div>
