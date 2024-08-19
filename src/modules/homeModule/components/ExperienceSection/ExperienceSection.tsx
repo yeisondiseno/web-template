@@ -16,7 +16,14 @@ const ExperienceSection = () => {
         <Button className='module-home-experience-button' width='fit'>
           RESERVA TU CLASE
         </Button>
-        <Carousel slidesToShow={3} height={477}>
+        <Carousel
+          slidesToShow={{
+            mobile: 1,
+            tablet: 2,
+            desktop: 3,
+          }}
+          height={477}
+        >
           {carrouselList.map(({ src, alt }) => (
             <Image
               key={src + alt}

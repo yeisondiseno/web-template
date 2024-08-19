@@ -1,4 +1,5 @@
 @import '../variables/index.scss';
+@import '../mixins/globalMixins.scss';
 
 h2 {
   font-size: 1.75rem;
@@ -12,6 +13,10 @@ h3 {
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+
+  @include responsive(mobile) {
+    font-size: 0.875rem;
+  }
 }
 
 h2,

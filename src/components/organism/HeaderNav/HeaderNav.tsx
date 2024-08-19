@@ -2,7 +2,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 // Components
-import { HamburgerButton, Nav, Slide, LogoIcon } from '@components/index';
+import {
+  HamburgerButton,
+  Nav,
+  Slide,
+  LogoIcon,
+  SocialList,
+} from '@components/index';
 // Styles
 import './HeaderNav.scss';
 
@@ -57,6 +63,7 @@ const HeaderNav = () => {
         </p>
         <p className='o-header-nav-p'>info@almafitness.com.co</p>
         <p className='o-header-nav-p'>+57 304 378 7141</p>
+        <SocialList />
       </Slide>
     </>
   );
