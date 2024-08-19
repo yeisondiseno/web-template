@@ -1,25 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 // Components
-import { HamburgerButton, Nav, LogoIcon } from '@/components/';
+import { LogoIcon, HeaderNav } from '@components/index';
 // Styles
 import './Header.scss';
 
-const Header = () => {
-  return (
-    <header className='o-header'>
-      <div className='o-header-container max-block'>
-        <Link href='./'>
-          <LogoIcon width={241} />
-        </Link>
+const Header = () => (
+  <header className='o-header'>
+    <div className='o-header-container max-block'>
+      <Link href='./'>
+        <LogoIcon width={241} />
+      </Link>
 
-        <div className='o-header-nav'>
-          <Nav />
-          <HamburgerButton />
-        </div>
+      <div className='o-header-nav'>
+        <HeaderNav />
       </div>
-    </header>
-  );
-};
+    </div>
+  </header>
+);
 
 export default Header;

@@ -24,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <div id='portal' />
+      </body>
     </html>
   );
 }

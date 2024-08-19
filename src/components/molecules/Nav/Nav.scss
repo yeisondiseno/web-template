@@ -28,7 +28,8 @@
     font-weight: bold;
     text-decoration: none;
 
-    &:hover .m-nav-ul-mark {
+    &:hover .m-nav-ul-mark,
+    &.active .m-nav-ul-mark {
       width: 50%;
     }
   }

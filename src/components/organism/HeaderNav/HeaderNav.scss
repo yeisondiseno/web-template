@@ -1,0 +1,27 @@
+@import '../../../styles/variables/index.scss';
+
+.o-header-nav {
+  &-logo {
+    margin-bottom: 2rem;
+  }
+
+  &-gallery {
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    row-gap: 0.8125rem;
+    column-gap: 0.3rem;
+
+    img {
+      position: relative !important ;
+      height: 10.875rem !important;
+      max-width: fit-content;
+    }
+  }
+
+  p {
+    font-size: 1.0625rem;
+    margin-bottom: 0.75rem;
+  }
+}
