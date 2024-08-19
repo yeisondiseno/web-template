@@ -8,8 +8,6 @@ import {
   LastSection,
   ExperienceSection,
 } from '@modules/homeModule/components/index';
-// Styles
-import './page.scss';
 
 export default function Home() {
   return (

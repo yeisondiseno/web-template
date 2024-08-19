@@ -1,0 +1,23 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-alma-method {
+  display: flex;
+  padding: 5rem 0;
+  gap: 20px;
+
+  & > div {
+    min-width: calc(50% - 10px);
+  }
+
+  &-title {
+    font-size: 3.8125rem;
+  }
+
+  &-mark {
+    display: block;
+    height: 0.5rem;
+    background-color: $primary;
+    width: 100%;
+    max-width: 13.125rem;
+  }
+}

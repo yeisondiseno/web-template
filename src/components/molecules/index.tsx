@@ -4,3 +4,4 @@ export { default as Nav } from './Nav/Nav';
 export { default as Carousel } from './Carousel/Carousel';
 export { default as Slide } from './Slide/Slide';
 export { default as SocialList } from './SocialList/SocialList';
+export { default as Table } from './Table/Table';

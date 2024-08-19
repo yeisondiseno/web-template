@@ -4,7 +4,7 @@ import { Header, Footer } from '@components/index';
 
 const Template = ({ children }: { children: ReactNode }) => {
   return (
-    <main className='home'>
+    <main>
       <Header />
       {children}
       <Footer />

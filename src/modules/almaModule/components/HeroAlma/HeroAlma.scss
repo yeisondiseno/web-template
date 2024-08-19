@@ -1,0 +1,17 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-alma-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-shadow: $text-shadow;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    font-size: 5.5rem;
+  }
+}
