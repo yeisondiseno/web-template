@@ -1,19 +1,18 @@
 import React from 'react';
 // Components
 import {
-  HeroAlma,
   MethodSection,
   ScheduleSection,
   ExperienceSection,
 } from '@modules/almaModule/components/index';
-import { MainCardSection } from '@components/index';
+import { MainCardSection, Hero } from '@components/index';
 // Styles
 import './almaPage.scss';
 
 const AlmaPage = () => {
   return (
     <>
-      <HeroAlma />
+      <Hero title='ALMA Fitness' backgroundImage='/assets/img/alma-hero.png' />
       <MethodSection />
       <MainCardSection variant='alma' />
       <ScheduleSection />
