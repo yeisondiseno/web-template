@@ -13,7 +13,7 @@ const NutritionPage = () => {
     <>
       <Hero
         title='ALMA Nutrición'
-        backgroundImage='/assets/img/alma-hero.png'
+        backgroundImage='/assets/img/nutrition.jpg'
       />
       Nutrition Page
     </>
