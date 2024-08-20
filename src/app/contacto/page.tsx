@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <Hero title='CONTACTO' backgroundImage='/assets/img/alma-hero.png' />
+      <Hero title='CONTACTO' backgroundImage='/assets/img/contact.jpg' />
       ContactPage Page
     </>
   );

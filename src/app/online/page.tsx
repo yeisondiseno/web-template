@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const OnlinePage = () => {
   return (
     <>
-      <Hero title='ALMA Online' backgroundImage='/assets/img/alma-hero.png' />
+      <Hero title='ALMA Online' backgroundImage='/assets/img/online.jpg' />
       OnlinePage Page
     </>
   );
