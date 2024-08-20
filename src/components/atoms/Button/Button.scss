@@ -14,8 +14,7 @@
   transition: $transition;
 
   &:hover {
-    color: $primary;
-    background-color: $white;
+    background-color: darken($color: $primary, $amount: 30%);
   }
 
   &:focus,

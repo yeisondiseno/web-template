@@ -1,0 +1,27 @@
+@import '../../../styles/variables/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
+
+.o-main-card {
+  div {
+    display: flex;
+    margin-top: -5rem;
+    flex-direction: row;
+    justify-content: center;
+
+    @include responsive(desktop) {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      margin: 2.5rem 0;
+    }
+  }
+
+  &.white {
+    background-color: $white;
+  }
+}
