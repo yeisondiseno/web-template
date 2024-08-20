@@ -1,0 +1,38 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
+
+.m-mask-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 360px;
+  max-width: 415px;
+  width: 100%;
+
+  @include responsive(mobile) {
+    min-width: auto;
+  }
+
+  &-img {
+    position: relative !important;
+    mask-image: url('/assets/img/mask.png');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    object-fit: scale-down;
+  }
+
+  p {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.6875rem;
+    text-shadow: $text-shadow;
+    z-index: 1;
+
+    @include responsive(tablet) {
+      font-size: 1.5rem;
+    }
+  }
+}

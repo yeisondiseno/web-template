@@ -2,18 +2,18 @@ import React from 'react';
 // Components
 import {
   HeroSection,
-  MainCardSection,
   AboutUsSection,
   FormSection,
   LastSection,
   ExperienceSection,
 } from '@modules/homeModule/components/index';
+import { MainCardSection } from '@components/index';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <MainCardSection />
+      <MainCardSection variant='home' />
       <AboutUsSection />
       <ExperienceSection />
       <FormSection />

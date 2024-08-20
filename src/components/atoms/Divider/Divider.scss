@@ -3,9 +3,31 @@
 .a-divider {
   width: 0;
   height: 0;
-  border-style: solid;
   border-left: 0 solid transparent;
-  border-right: 100vw solid $white;
   border-top: 60px solid transparent;
-  transform: rotateY(180deg);
+
+  &.white {
+    border-right: 100vw solid $white;
+  }
+
+  &.black {
+    border-right: 100vw solid $bg;
+  }
+
+  &.right {
+    transform: rotateY(0deg) !important;
+  }
+
+  &.bottom {
+    transform: rotateY(180deg);
+  }
+
+  &.top {
+    transform: rotateZ(180deg);
+  }
+
+  &-container {
+    width: 100%;
+    overflow: hidden;
+  }
 }

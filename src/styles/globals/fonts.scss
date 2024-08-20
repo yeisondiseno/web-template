@@ -14,6 +14,7 @@ h3 {
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+  margin-bottom: 1rem;
 
   @include responsive(mobile) {
     font-size: 0.875rem;
