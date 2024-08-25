@@ -16,3 +16,13 @@
   background-color: $white;
   color: $black;
 }
+
+.hr {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $primary;
+  width: 100%;
+  max-width: 15rem;
+  margin-left: 0;
+}

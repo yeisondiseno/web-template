@@ -5,6 +5,7 @@ import {
   MethodSection,
   ScheduleSection,
   ExperienceSection,
+  PlansSection,
 } from '@modules/almaModule/components/index';
 import { MainCardSection, Hero } from '@components/index';
 // Styles
@@ -23,7 +24,7 @@ const AlmaPage = () => {
       <MainCardSection variant='alma' />
       <ScheduleSection />
       <ExperienceSection />
-      <section>PLANES Y SEVICIOS</section>
+      <PlansSection />
       <section>Estudiantes</section>
       <section>NUESTROS ENTRENADORES¡</section>
     </>
