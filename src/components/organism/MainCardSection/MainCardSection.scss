@@ -16,7 +16,7 @@
 
     @include responsive(tablet) {
       flex-direction: column;
-      margin: 2.5rem 0;
+      padding: 2.5rem 1rem;
     }
   }
 

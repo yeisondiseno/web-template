@@ -1,4 +1,5 @@
 @import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
 
 .module-alma-method {
   display: flex;
@@ -6,12 +7,21 @@
   padding-bottom: 15rem;
   gap: 20px;
 
+  @include responsive(tablet) {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
   & > div {
     min-width: calc(50% - 10px);
   }
 
   &-title {
     font-size: 3.8125rem;
+
+    @include responsive(mobile) {
+      font-size: 1.5rem;
+    }
   }
 
   &-mark {

@@ -4,3 +4,7 @@ export { default as Facebook } from './Facebook';
 export { default as Instagram } from './Instagram';
 export { default as Check } from './Check';
 export { default as Close } from './Close';
+export { default as StarIcon } from './StarIcon';
+export { default as StudentIcon } from './StudentIcon';
+export { default as AppleIcon } from './AppleIcon';
+export { default as MetroIcon } from './MetroIcon';
