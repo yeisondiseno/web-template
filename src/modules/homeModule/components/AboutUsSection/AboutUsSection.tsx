@@ -6,7 +6,10 @@ import './AboutUsSection.scss';
 
 const AboutUsSection = () => {
   return (
-    <section className='module-home-about-us '>
+    <section
+      className='module-home-about-us '
+      style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
+    >
       <article className='module-home-about-us-container max-block'>
         <div>
           <h2 className='module-home-about-us-title'>Nosotros</h2>
@@ -18,10 +21,7 @@ const AboutUsSection = () => {
             nutricional y mucho mas!
           </p>
         </div>
-        <div
-          className='module-home-about-us-right'
-          style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
-        >
+        <div className='module-home-about-us-right'>
           <h3 className='font-border black'>ELEVA TU POTENCIAL</h3>
         </div>
       </article>
