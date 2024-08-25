@@ -4,6 +4,17 @@ import { Check, Close } from '@/components';
 // Key
 const key = new Date().toString();
 
+export const days = [
+  'Horario',
+  'Lunes',
+  'Martes',
+  'Miercoles',
+  'Jueves',
+  'Viernes',
+  'Sábado',
+  'Domingo',
+];
+
 export const weekSchedule = [
   [
     '5:00AM',
@@ -104,5 +115,302 @@ export const weekSchedule = [
     <Check key={key} />,
     <Close key={key} />,
     <Close key={key} />,
+  ],
+];
+
+export const listDrop = [
+  [
+    {
+      time: '5:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Check key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Check key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Check key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Check key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Check key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Check key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Close key={key} />,
+    },
+  ],
+  [
+    {
+      time: '5:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '6:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '7:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '8:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '9:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '10:00AM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '4:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '5:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '6:00PM',
+      icon: <Close key={key} />,
+    },
+    {
+      time: '7:00PM',
+      icon: <Close key={key} />,
+    },
   ],
 ];

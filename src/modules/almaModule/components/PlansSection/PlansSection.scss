@@ -17,6 +17,10 @@
 
   & > div {
     width: calc(50% - 0.8125rem);
+
+    @include responsive(mobile) {
+      width: 100%;
+    }
   }
 
   &-description {

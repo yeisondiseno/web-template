@@ -1,10 +1,12 @@
 import React from 'react';
 // Components
-import { Table } from '@components/index';
+import { Table, DropDown } from '@components/index';
 // Constants
-import { weekSchedule } from '@constant/index';
+import { weekSchedule, days, listDrop } from '@constant/index';
 // Styles
 import './ScheduleSection.scss';
+
+const daysNotFirstElement = days.slice(1);
 
 const ScheduleSection = () => {
   return (
@@ -18,18 +20,27 @@ const ScheduleSection = () => {
         </p>
 
         <Table
-          head={[
-            'Horario',
-            'Lunes',
-            'Martes',
-            'Miercoles',
-            'Jueves',
-            'Viernes',
-            'Sábado',
-            'Domingo',
-          ]}
+          head={days}
           body={weekSchedule}
+          className='module-alma-schedule-table'
         />
+        <div className='module-alma-schedule-drop'>
+          {daysNotFirstElement?.map((day, index) => (
+            <DropDown key={day} title={day}>
+              <div className='module-alma-schedule-drop-content'>
+                {listDrop[index]?.map(({ time, icon }) => (
+                  <div
+                    key={time + day}
+                    className='module-alma-schedule-drop-content-block'
+                  >
+                    <p>{time}</p>
+                    {icon}
+                  </div>
+                ))}
+              </div>
+            </DropDown>
+          ))}
+        </div>
       </div>
     </section>
   );

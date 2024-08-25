@@ -9,6 +9,7 @@
   z-index: 1;
 
   @include responsive(mobile) {
+    position: relative;
     margin-top: 0;
     padding: 1rem 0;
     background-color: $bg-slide;
@@ -18,6 +19,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include responsive(mobile) {
+      a svg {
+        width: 10.1875rem;
+      }
+    }
   }
 
   &-nav {
