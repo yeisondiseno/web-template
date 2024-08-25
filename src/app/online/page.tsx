@@ -1,6 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 // Components
+import {
+  EvolutionSection,
+  MethodSection,
+  ScheduleSection,
+} from '@modules/onlineModule/index';
+// Components
 import { Hero } from '@components/index';
 
 export const metadata: Metadata = {
@@ -12,6 +18,9 @@ const OnlinePage = () => {
   return (
     <>
       <Hero title='ALMA Online' backgroundImage='/assets/img/online.jpg' />
+      <EvolutionSection />
+      <MethodSection />
+      <ScheduleSection />
       OnlinePage Page
     </>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Check = () => (
-  <svg xmlns='http://www.w3.org/2000/svg' width={24} height={24}>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='1rem'
+    height='1rem'
+    viewBox='2 2 20 20'
+  >
     <path
       d='M21 6 9 18l-5-5'
       style={{

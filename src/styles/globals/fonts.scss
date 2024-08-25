@@ -24,6 +24,10 @@ p {
 h2,
 h3,
 p {
+  &.c-primary {
+    color: $primary;
+  }
+
   &.italic {
     font-style: italic;
   }
