@@ -19,6 +19,12 @@
     width: calc(50% - 0.8125rem);
   }
 
+  &-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   &-plan-content {
     display: flex;
     flex-direction: row;

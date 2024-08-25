@@ -1,0 +1,32 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-alma-trainer {
+  &-titles {
+    padding-top: 10.625rem;
+    padding-bottom: 18.75rem;
+
+    p {
+      max-width: 59.6875rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &-first-card {
+    display: flex;
+    gap: 5rem;
+    margin-top: -13.4375rem;
+  }
+
+  &-mid-text {
+    background-color: $secondary;
+    padding: 1rem;
+    margin: 4.4375rem 0;
+    font-size: 1.125rem;
+  }
+
+  &-last-card {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 3.5625rem;
+  }
+}

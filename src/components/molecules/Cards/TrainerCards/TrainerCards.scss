@@ -1,0 +1,32 @@
+@import '../../../../styles/variables/index.scss';
+
+.m-trainer-card {
+  img {
+    transition: $transition ease-in-out;
+  }
+
+  &:hover img {
+    transform: translateY(-0.5rem);
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 0.625rem 0;
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    &-line {
+      display: block;
+      background-color: $primary;
+      width: 100%;
+      max-width: 120px;
+      height: 0.375rem;
+      transform: $skew-x;
+    }
+  }
+}

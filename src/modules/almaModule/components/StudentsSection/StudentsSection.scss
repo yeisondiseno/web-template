@@ -1,0 +1,13 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-alma-students {
+  padding: 4.125rem 0;
+
+  &-content {
+    display: flex;
+
+    & > div {
+      width: 50%;
+    }
+  }
+}
