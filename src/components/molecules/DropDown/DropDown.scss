@@ -1,0 +1,37 @@
+@import '../../../styles/variables/index.scss';
+
+.m-drop-down {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: none;
+    padding: 1rem 0.625rem;
+    background-color: $primary;
+    color: $white;
+    margin-bottom: 1px;
+
+    & > i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+
+      transition: $transition ease-in;
+
+      &.open {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  &-body {
+    padding: 5px;
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+}

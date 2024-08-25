@@ -1,15 +1,15 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ComponentPropsWithoutRef } from 'react';
 // Styles
 import './Table.scss';
 
-type TableType = {
+type TableType = ComponentPropsWithoutRef<'table'> & {
   head?: Array<string | ReactNode>;
   body?: Array<Array<string | ReactNode>>;
 };
 
-const Table = ({ head, body }: TableType) => {
+const Table = ({ head, body, className, ...props }: TableType) => {
   return (
-    <table className='m-table'>
+    <table className={`m-table ${className}`} {...props}>
       {head && (
         <thead className='m-table-head'>
           <tr>

@@ -8,3 +8,4 @@ export { default as StarIcon } from './StarIcon';
 export { default as StudentIcon } from './StudentIcon';
 export { default as AppleIcon } from './AppleIcon';
 export { default as MetroIcon } from './MetroIcon';
+export { default as ChevronDown } from './ChevronDown';
