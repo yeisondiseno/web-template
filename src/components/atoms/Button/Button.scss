@@ -11,7 +11,7 @@
   box-shadow: $shadow;
   cursor: pointer;
 
-  transition: $transition;
+  transition: $transition ease-in-out;
 
   &:hover {
     background-color: darken($color: $primary, $amount: 30%);
