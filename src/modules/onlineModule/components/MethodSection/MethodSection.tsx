@@ -31,6 +31,7 @@ const MethodSection = () => {
             width={300}
             height={400}
             className='module-online-method-content-images-1'
+            objectFit='contain'
           />
           <Image
             alt=''
@@ -38,6 +39,7 @@ const MethodSection = () => {
             width={300}
             height={400}
             className='module-online-method-content-images-2'
+            objectFit='contain'
           />
         </div>
       </div>

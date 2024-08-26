@@ -4,9 +4,17 @@
 .module-online-method {
   padding: 8.375rem 0;
 
+  @include responsive(tablet) {
+    padding-top: 0;
+  }
+
   &-content {
     display: flex;
     gap: 2rem;
+
+    @include responsive(tablet) {
+      flex-direction: column-reverse;
+    }
 
     & > div {
       flex: 1;
@@ -37,8 +45,18 @@
     &-images {
       position: relative;
 
+      @include responsive(tablet) {
+        min-height: 600px;
+        margin-top: -2rem;
+      }
+
       & > img {
         position: absolute;
+
+        @include responsive(tablet) {
+          width: 250px;
+          height: 340px;
+        }
       }
 
       &-1 {

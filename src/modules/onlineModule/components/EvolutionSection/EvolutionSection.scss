@@ -2,10 +2,24 @@
 @import '../../../../styles/mixins/globalMixins.scss';
 
 .module-online-evolution {
-  padding: 7.75rem 0;
+  padding-top: 7.75rem;
+  padding-bottom: 7.75rem;
+
+  @include responsive(tablet) {
+    padding-top: 1.375rem;
+    padding-bottom: 5rem;
+  }
 
   h2 {
     font-size: 3.8125rem;
+
+    @include responsive(tablet) {
+      font-size: 2.25rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 1.5rem;
+    }
   }
 
   span {
@@ -20,6 +34,10 @@
   &-content {
     display: flex;
     gap: 2rem;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
 
     & > div {
       flex: 1;
