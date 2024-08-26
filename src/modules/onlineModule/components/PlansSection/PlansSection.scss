@@ -8,11 +8,19 @@
   background-repeat: no-repeat;
   padding: 9.3125rem 0;
 
+  @include responsive(tablet) {
+    padding: 5rem 0;
+  }
+
   &-content {
     position: relative;
     display: flex;
     gap: 3.75rem;
     z-index: 1;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
 
     & > div {
       flex: 1;
