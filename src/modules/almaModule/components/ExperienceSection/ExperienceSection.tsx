@@ -1,6 +1,6 @@
 import React from 'react';
 // Components
-import { Divider, Button } from '@components/index';
+import { Divider, Button, CoverShadow } from '@components/index';
 // Styles
 import './ExperienceSection.scss';
 
@@ -10,7 +10,7 @@ const ExperienceSection = () => {
       className='module-alma-experience'
       style={{ backgroundImage: `url('/assets/img/experience.jpg')` }}
     >
-      <div className='module-alma-experience-shadow' />
+      <CoverShadow />
       <Divider vertical='top' />
       <div className='module-alma-experience-container  max-block'>
         <h2 className='module-alma-experience-title'>

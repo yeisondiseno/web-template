@@ -1,0 +1,40 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
+
+.module-online-plans {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 9.3125rem 0;
+
+  &-content {
+    position: relative;
+    display: flex;
+    gap: 3.75rem;
+    z-index: 1;
+
+    & > div {
+      flex: 1;
+    }
+  }
+
+  &-content-text {
+    h2 {
+      margin: 0;
+    }
+
+    hr {
+      margin: 1rem 0;
+    }
+  }
+
+  &-content-p {
+    margin-top: 1.25rem;
+  }
+
+  &-content-card {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}

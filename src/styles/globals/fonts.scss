@@ -19,11 +19,19 @@ p {
   @include responsive(mobile) {
     font-size: 0.875rem;
   }
+
+  &.small {
+    font-size: 0.8125rem;
+  }
 }
 
 h2,
 h3,
 p {
+  &.c-primary {
+    color: $primary;
+  }
+
   &.italic {
     font-style: italic;
   }
