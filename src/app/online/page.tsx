@@ -5,6 +5,7 @@ import {
   EvolutionSection,
   MethodSection,
   ScheduleSection,
+  PlansSection,
 } from '@modules/onlineModule/index';
 // Components
 import { Hero } from '@components/index';
@@ -21,7 +22,7 @@ const OnlinePage = () => {
       <EvolutionSection />
       <MethodSection />
       <ScheduleSection />
-      OnlinePage Page
+      <PlansSection />
     </>
   );
 };

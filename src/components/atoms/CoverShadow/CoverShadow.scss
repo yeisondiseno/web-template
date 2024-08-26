@@ -1,0 +1,9 @@
+@import '../../../styles/variables/index.scss';
+
+.a-cover-shadow {
+  background-color: $black;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}

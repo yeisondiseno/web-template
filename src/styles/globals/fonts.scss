@@ -19,6 +19,10 @@ p {
   @include responsive(mobile) {
     font-size: 0.875rem;
   }
+
+  &.small {
+    font-size: 0.8125rem;
+  }
 }
 
 h2,
