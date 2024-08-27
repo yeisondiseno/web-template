@@ -1,0 +1,28 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
+
+.module-contact-contact {
+  background-color: $gray-9;
+
+  &-content {
+    display: flex;
+    padding-top: 2.5rem;
+    padding-bottom: 5.5rem;
+    gap: 126px;
+
+    & > div {
+      flex: 1;
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-map {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+}
