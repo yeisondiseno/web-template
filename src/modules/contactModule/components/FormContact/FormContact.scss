@@ -1,0 +1,9 @@
+@import '../../../../styles/variables/index.scss';
+
+.module-contact-form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+
+  margin-top: 59px;
+}

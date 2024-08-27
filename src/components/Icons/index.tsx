@@ -9,3 +9,7 @@ export { default as StudentIcon } from './StudentIcon';
 export { default as AppleIcon } from './AppleIcon';
 export { default as MetroIcon } from './MetroIcon';
 export { default as ChevronDown } from './ChevronDown';
+export { default as Position } from './Position';
+export { default as Phone } from './Phone';
+export { default as Email } from './Email';
+export { default as Clock } from './Clock';

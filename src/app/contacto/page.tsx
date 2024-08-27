@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 // Components
 import { Hero } from '@components/index';
+import { InformationSection, ContactSection } from '@modules/contactModule';
 
 export const metadata: Metadata = {
   description:
@@ -12,7 +13,8 @@ const ContactPage = () => {
   return (
     <>
       <Hero title='CONTACTO' backgroundImage='/assets/img/contact.jpg' />
-      ContactPage Page
+      <InformationSection />
+      <ContactSection />
     </>
   );
 };

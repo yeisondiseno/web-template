@@ -1,0 +1,63 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/mixins/globalMixins.scss';
+
+.module-contact-information {
+  padding-top: 8.125rem;
+  padding-bottom: 4.4375rem;
+
+  h2 {
+    margin: 0;
+    font-size: 3.8125rem;
+  }
+
+  &-content {
+    display: flex;
+    margin-top: 6.5625rem;
+
+    & > aside {
+      flex: 1;
+    }
+  }
+
+  &-content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      border-radius: 50%;
+      color: $primary;
+      width: 11.875rem;
+      height: 11.875rem;
+      transition: $transition ease-in-out;
+
+      svg {
+        width: 6.25rem;
+        height: 6.25rem;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+
+  &-content-card-text {
+    margin-top: 4.4375rem;
+    p {
+      color: $primary;
+      text-align: center;
+      font-size: 1.4375rem;
+      font-weight: 900;
+    }
+
+    span {
+      font-size: 24px;
+    }
+  }
+}

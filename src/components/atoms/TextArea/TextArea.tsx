@@ -2,19 +2,19 @@ import React, { ComponentPropsWithoutRef, forwardRef } from 'react';
 // Libraries
 import sanitizeHtml from 'sanitize-html';
 // Styles
-import './Input.scss';
+import './TextArea.scss';
 
-type InputType = ComponentPropsWithoutRef<'input'>;
+type TextAreaType = ComponentPropsWithoutRef<'textarea'>;
 
-const Input = (
-  { ...props }: InputType,
-  ref: React.LegacyRef<HTMLInputElement> | undefined,
+const TextArea = (
+  { ...props }: TextAreaType,
+  ref: React.LegacyRef<HTMLTextAreaElement> | undefined,
 ) => {
   // Props
   const { onChange, className } = props;
 
   // Actions
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     e.target.value = sanitizeHtml(e.target.value);
     onChange?.(e);
   };
@@ -22,13 +22,13 @@ const Input = (
   delete props.onChange;
 
   return (
-    <input
+    <textarea
       {...props}
-      className={`${className} a-input`}
+      className={`${className} a-textarea`}
       onChange={onChangeHandler}
       ref={ref}
     />
   );
 };
 
-export default forwardRef(Input);
+export default forwardRef(TextArea);
