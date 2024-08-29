@@ -3,8 +3,8 @@ import React from 'react';
 const Check = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width='1rem'
-    height='1rem'
+    width='1em'
+    height='1em'
     viewBox='2 2 20 20'
   >
     <path
