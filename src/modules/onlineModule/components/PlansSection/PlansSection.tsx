@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
+// Constants
+import { whatsAppLink } from '@constant/index';
 // Components
 import { Button, PlanCard, CoverShadow } from '@components/index';
 // Styles
@@ -16,7 +19,9 @@ const PlansSection = () => {
           <h2 className='light'>Conoce nuestros </h2>
           <h2 className='black'>PLANES Y SERVICIOS ONLINE</h2>
           <hr className='hr' />
-          <Button>Selecciona tu plan</Button>
+          <Link href={whatsAppLink} target='_blank'>
+            <Button>Selecciona tu plan</Button>
+          </Link>
         </div>
         <div>
           <PlanCard header='INTEGRAL DELUXE' footer='$290.000 / Mensual'>

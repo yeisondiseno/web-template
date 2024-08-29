@@ -3,15 +3,15 @@ import React from 'react';
 const Phone = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width='1rem'
-    height='1rem'
+    width='1em'
+    height='1em'
     fill='none'
     viewBox='10 -5 85 95'
   >
     <mask
       id='a'
-      width='1rem'
-      height='1rem'
+      width='1em'
+      height='1em'
       x={0}
       y={0}
       maskUnits='userSpaceOnUse'

@@ -7,15 +7,15 @@ import './SocialList.scss';
 
 const socialList = [
   {
-    href: './',
+    href: 'https://www.youtube.com/channel/UCqfT4jwd-YiAKbGcm-fuUJQ',
     icon: <Youtube />,
   },
   {
-    href: './',
+    href: 'https://www.facebook.com/almafitnessentrenamiento',
     icon: <Facebook />,
   },
   {
-    href: './',
+    href: 'https://www.instagram.com/almafitnessentrenamiento/',
     icon: <Instagram />,
   },
 ];
@@ -24,7 +24,7 @@ const SocialList = ({ className = '' }: { className?: string }) => {
   return (
     <div className={`m-social-list ${className}`}>
       {socialList.map(({ href, icon }) => (
-        <Link key={href} href={href}>
+        <Link key={href} href={href} target='_blank'>
           {icon}
         </Link>
       ))}

@@ -1,6 +1,11 @@
 import React, { ReactNode } from 'react';
+import Link from 'next/link';
+// Constants
+import { whatsAppLink } from '@/constant';
 // Components
-import { Header, Footer } from '@components/index';
+import { Header, Footer, WhatsApp } from '@components/index';
+// Stiles
+import './template.scss';
 
 const Template = ({ children }: { children: ReactNode }) => {
   return (
@@ -8,6 +13,9 @@ const Template = ({ children }: { children: ReactNode }) => {
       <Header />
       {children}
       <Footer />
+      <Link href={whatsAppLink} target='_blank' className='app-t-whats-app'>
+        <WhatsApp />
+      </Link>
     </main>
   );
 };

@@ -13,3 +13,4 @@ export { default as Position } from './Position';
 export { default as Phone } from './Phone';
 export { default as Email } from './Email';
 export { default as Clock } from './Clock';
+export { default as WhatsApp } from './WhatsApp';

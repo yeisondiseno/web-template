@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 // Components
 import { Button, PlanCard } from '@components/index';
 // Constants
 import { planList } from '../../constants/index';
+import { whatsAppLink } from '@constant/index';
 // Style
 import './PlansSection.scss';
 
@@ -18,7 +20,9 @@ const PlansSection = () => {
           de 16 a 18 usuarias (Con # De Sesiones Especificas) + Guía Nutricional
           Individual + Toma De Medidas Corporales + Club De Beneficios.
         </p>
-        <Button className='fit'>Selecciona tu plan</Button>
+        <Link href={whatsAppLink} target='_blank'>
+          <Button className='fit'>Selecciona tu plan</Button>
+        </Link>
       </div>
       <div className='module-alma-plan-plan-content'>
         {planList.map(({ header, footer, list }) => (

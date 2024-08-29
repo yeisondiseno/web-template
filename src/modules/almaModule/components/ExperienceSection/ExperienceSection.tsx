@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
+// Constant
+import { whatsAppLink } from '@constant/index';
 // Components
 import { Divider, Button, CoverShadow } from '@components/index';
 // Styles
@@ -25,7 +28,9 @@ const ExperienceSection = () => {
           Retiro. Además, puedes disfrutar de nuestras clases en línea.
         </p>
 
-        <Button>RESERVA TU CLASE</Button>
+        <Link href={whatsAppLink} target='_blank'>
+          <Button>RESERVA TU CLASE</Button>
+        </Link>
       </div>
       <Divider vertical='bottom' color='black' horizontal='right' />
     </section>
