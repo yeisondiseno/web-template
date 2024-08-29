@@ -1,4 +1,6 @@
 import React from 'react';
+// Components
+import { SocialList } from '@components/index';
 // Styles
 import './HeroSection.scss';
 
@@ -16,6 +18,7 @@ const HeroSection = () => {
         </h1>
         <h3 className='font-border pink'>CONTIANZA, SEGURIDAD Y SALUD</h3>
       </div>
+      <SocialList className='module-home-hero-social' />
     </section>
   );
 };

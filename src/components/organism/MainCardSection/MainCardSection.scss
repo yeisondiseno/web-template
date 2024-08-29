@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 1.25rem;
 
     @include responsive(desktop) {
       justify-content: center;
