@@ -1,6 +1,14 @@
 @import '../../../styles/variables/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
 
 .o-header-nav {
+  display: flex;
+  &-desktop {
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
   &-logo {
     margin-bottom: 2rem;
   }

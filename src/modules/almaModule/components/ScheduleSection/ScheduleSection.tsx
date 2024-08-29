@@ -19,11 +19,9 @@ const ScheduleSection = () => {
           están disponibles en un momento dado. Sábados clase cada 15 días.
         </p>
 
-        <Table
-          head={days}
-          body={weekSchedule}
-          className='module-alma-schedule-table'
-        />
+        <div className='module-alma-schedule-table'>
+          <Table head={days} body={weekSchedule} />
+        </div>
         <div className='module-alma-schedule-drop'>
           {daysNotFirstElement?.map((day, index) => (
             <DropDown key={day} title={day}>

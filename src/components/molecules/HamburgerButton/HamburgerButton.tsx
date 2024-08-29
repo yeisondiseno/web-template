@@ -2,11 +2,13 @@ import React, { ComponentPropsWithoutRef } from 'react';
 // Style
 import './HamburgerButton.scss';
 
-type HamburgerButtonType = ComponentPropsWithoutRef<'button'>;
+type HamburgerButtonType = ComponentPropsWithoutRef<'button'> & {
+  open: boolean;
+};
 
-const HamburgerButton = (props: HamburgerButtonType) => {
+const HamburgerButton = ({ open, ...props }: HamburgerButtonType) => {
   return (
-    <button className='m-hamburger-button' {...props}>
+    <button className={`m-hamburger-button ${open ? 'open' : ''}`} {...props}>
       <span />
       <span className='m-hamburger-button-1' />
       <span className='m-hamburger-button-2' />
