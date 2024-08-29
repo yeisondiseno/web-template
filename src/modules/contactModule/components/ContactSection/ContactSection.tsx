@@ -21,6 +21,7 @@ const ContactSection = () => {
               alt={''}
               width={446}
               height={616}
+              layout='responsive'
               objectFit='cover'
             />
           </div>

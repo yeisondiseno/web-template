@@ -37,6 +37,8 @@ const LastSection = () => {
             width={271}
             height={178}
             className='module-home-last-card-img'
+            layout='responsive'
+            objectFit='cover'
           />
           <div className='module-home-last-card-content'>
             <h2 className='bold'>{title}</h2>

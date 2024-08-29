@@ -10,6 +10,14 @@
     padding-bottom: 5.5rem;
     gap: 126px;
 
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+
+    @include responsive(desktop) {
+      gap: 2.5rem;
+    }
+
     & > div {
       flex: 1;
     }

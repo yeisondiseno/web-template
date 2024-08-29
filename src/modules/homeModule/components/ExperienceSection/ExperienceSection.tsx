@@ -31,7 +31,8 @@ const ExperienceSection = () => {
               alt={alt}
               width={528}
               height={693}
-              objectFit='fit'
+              layout='responsive'
+              objectFit='cover'
             />
           ))}
         </Carousel>
