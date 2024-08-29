@@ -7,7 +7,8 @@ type TableType = ComponentPropsWithoutRef<'table'> & {
   body?: Array<Array<string | ReactNode>>;
 };
 
-const Table = ({ head, body, className, ...props }: TableType) => {
+const Table = ({ head, body, className = '', ...props }: TableType) => {
+
   return (
     <table className={`m-table ${className}`} {...props}>
       {head && (

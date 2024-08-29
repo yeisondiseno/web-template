@@ -6,22 +6,25 @@ import './Slide.scss';
 
 type SlideType = {
   open?: boolean;
-  children: ReactNode;
+  className?: string;
   handledOpen: () => void;
+  children: ReactNode;
 };
 
-const Slide = ({ open = false, handledOpen, children }: SlideType) => {
-  console.log('Slide', open);
-  return (
-    <Portal show={open} id='portal'>
-      <section className='m-slide'>
-        <button className='m-slide-close' onClick={handledOpen}>
-          x
-        </button>
-        {children}
-      </section>
-    </Portal>
-  );
-};
+const Slide = ({
+  open = false,
+  className = '',
+  handledOpen,
+  children,
+}: SlideType) => (
+  <Portal show={open} id='portal'>
+    <section className={`m-slide ${className}`}>
+      <button className='m-slide-close' onClick={handledOpen}>
+        x
+      </button>
+      {children}
+    </section>
+  </Portal>
+);
 
 export default Slide;

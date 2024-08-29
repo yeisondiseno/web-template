@@ -29,6 +29,7 @@ const StudentsSection = () => {
             referrerPolicy='strict-origin-when-cross-origin'
             allowFullScreen
             style={{ border: 'none', width: '100%' }}
+            className='module-alma-students-content-video-frame'
           ></iframe>
         </div>
       </div>

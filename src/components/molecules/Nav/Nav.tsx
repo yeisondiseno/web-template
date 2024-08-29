@@ -25,7 +25,11 @@ const navList = [
   },
 ];
 
-const Nav = () => {
+type NavProps = {
+  open: boolean;
+};
+
+const Nav = ({ open }: NavProps) => {
   // Route
   const pathname = usePathname();
 
@@ -35,7 +39,7 @@ const Nav = () => {
   };
 
   return (
-    <menu className='m-nav'>
+    <menu className={`m-nav ${open ? 'open' : ''}`}>
       <nav>
         <ul className='m-nav-ul'>
           {navList.map(({ label, href }) => (

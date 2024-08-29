@@ -7,7 +7,7 @@
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
 
-  @include responsive(mobile) {
+  @include responsive(tablet) {
     flex-direction: column;
   }
 
@@ -27,6 +27,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @include responsive(desktop) {
+      flex-direction: column;
+    }
   }
 
   &-plan-content {
@@ -44,7 +48,7 @@
         min-width: min(50%, 20rem);
       }
 
-      @include responsive(mobile) {
+      @include responsive(tablet) {
         min-width: min(100%, 20rem);
       }
     }

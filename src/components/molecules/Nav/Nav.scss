@@ -6,8 +6,18 @@
   padding: 0;
   margin: 0;
 
-  @include responsive(desktop) {
+  &.open {
+    display: block;
+  }
+
+  @include responsive(tablet) {
+    position: absolute;
     display: none;
+    text-align: center;
+    top: 78px;
+    right: 0;
+    left: 0;
+    background-color: $gray-6;
   }
 
   &-ul {
@@ -15,6 +25,12 @@
     gap: 2.0625rem;
     padding: 0;
     margin: 0;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
 
     li {
       display: contents;
@@ -27,6 +43,12 @@
     font-size: 1.0625rem;
     font-weight: bold;
     text-decoration: none;
+    text-wrap: nowrap;
+
+    @include responsive(tablet) {
+      padding: 1.375rem 0;
+      border-bottom: solid 1px $white;
+    }
 
     &:hover .m-nav-ul-mark,
     &.active .m-nav-ul-mark {
@@ -41,5 +63,9 @@
     background-color: $primary;
     transform: $skew-x;
     transition: $transition;
+
+    @include responsive(tablet) {
+      display: none;
+    }
   }
 }

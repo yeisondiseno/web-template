@@ -10,7 +10,8 @@
 
   &-content {
     display: flex;
-    @include responsive(mobile) {
+
+    @include responsive(tablet) {
       flex-direction: column;
     }
 
@@ -26,6 +27,11 @@
       @include responsive(mobile) {
         margin-top: 2rem;
       }
+    }
+
+    &-video-frame {
+      border: none;
+      width: 100%;
     }
   }
 

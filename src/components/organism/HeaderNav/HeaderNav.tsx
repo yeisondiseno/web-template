@@ -41,9 +41,13 @@ const HeaderNav = () => {
 
   return (
     <>
-      <Nav />
-      <HamburgerButton onClick={() => setIsOpen(true)} />
-      <Slide open={isOpen} handledOpen={() => setIsOpen(false)}>
+      <Nav open={isOpen} />
+      <HamburgerButton onClick={() => setIsOpen(!isOpen)} open={isOpen} />
+      <Slide
+        open={isOpen}
+        handledOpen={() => setIsOpen(false)}
+        className='o-header-nav-desktop'
+      >
         <LogoIcon width={240} className='o-header-nav-logo' />
         <p className='o-header-nav-p'>
           ¡ALMA es para todas las mujeres! No importa tu nivel deportivo ni tu
