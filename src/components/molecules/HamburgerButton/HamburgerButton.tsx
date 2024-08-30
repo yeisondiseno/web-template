@@ -8,7 +8,11 @@ type HamburgerButtonType = ComponentPropsWithoutRef<'button'> & {
 
 const HamburgerButton = ({ open, ...props }: HamburgerButtonType) => {
   return (
-    <button className={`m-hamburger-button ${open ? 'open' : ''}`} {...props}>
+    <button
+      className={`m-hamburger-button ${open ? 'open' : ''}`}
+      aria-label='Abrir menú'
+      {...props}
+    >
       <span />
       <span className='m-hamburger-button-1' />
       <span className='m-hamburger-button-2' />

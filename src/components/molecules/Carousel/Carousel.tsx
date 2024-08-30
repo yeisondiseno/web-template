@@ -63,7 +63,11 @@ const Carousel = ({
 
   return (
     <section className='m-carousel'>
-      <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+      <PrevButton
+        onClick={onPrevButtonClick}
+        disabled={prevBtnDisabled}
+        aria-label='Ir imágen anterior'
+      />
       <section className={`m-carousel-embla `}>
         <div className='m-carousel-embla__viewport' ref={emblaRef}>
           <div
@@ -87,7 +91,11 @@ const Carousel = ({
           </div>
         </div>
       </section>
-      <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      <NextButton
+        onClick={onNextButtonClick}
+        disabled={nextBtnDisabled}
+        aria-label='Ir a siguiente imágen'
+      />
     </section>
   );
 };
