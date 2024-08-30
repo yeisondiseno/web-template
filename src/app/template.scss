@@ -13,6 +13,7 @@
   width: 52px;
   height: 52px;
   transition: 0.5s ease-in-out;
+  z-index: 10;
 
   &:hover {
     transform: translateY(-10px);

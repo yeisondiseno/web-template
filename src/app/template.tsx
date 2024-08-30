@@ -13,7 +13,12 @@ const Template = ({ children }: { children: ReactNode }) => {
       <Header />
       {children}
       <Footer />
-      <Link href={whatsAppLink} target='_blank' className='app-t-whats-app'>
+      <Link
+        href={whatsAppLink}
+        target='_blank'
+        className='app-t-whats-app'
+        aria-label='Escríbenos por WhatsApp'
+      >
         <WhatsApp />
       </Link>
     </main>
