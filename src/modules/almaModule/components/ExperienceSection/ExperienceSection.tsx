@@ -10,7 +10,7 @@ import './ExperienceSection.scss';
 const ExperienceSection = () => {
   return (
     <section
-      className='module-alma-experience'
+      className='module-alma-experience parallax'
       style={{ backgroundImage: `url('/assets/img/experience.jpg')` }}
     >
       <CoverShadow />

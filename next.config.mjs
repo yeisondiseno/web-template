@@ -5,6 +5,9 @@ import path from 'path';
 const __dirname = path.resolve();
 
 const nextConfig = {
+  experimental: {
+    cssChunking: 'loose',
+  },
   reactStrictMode: true,
   swcMinify: true,
   sassOptions: {

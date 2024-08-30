@@ -10,7 +10,7 @@ import './PlansSection.scss';
 const PlansSection = () => {
   return (
     <section
-      className='module-online-plans'
+      className='module-online-plans parallax'
       style={{ backgroundImage: `url('/assets/img/online/back.png')` }}
     >
       <CoverShadow />
