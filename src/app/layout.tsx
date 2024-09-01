@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+// Config
+import { env } from '@config/env';
 // Fonts
 import { Poppins } from 'next/font/google';
 // Styles
@@ -14,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Alma Fitness',
-  robots: 'noindex, nofollow',
+  robots: env.envMode === 'develop' ? 'noindex, nofollow' : '',
   creator: 'Yeison Montoya',
   authors: [{ name: ' Yeison Montoya' }],
 };

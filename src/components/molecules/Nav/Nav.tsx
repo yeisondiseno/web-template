@@ -16,8 +16,8 @@ const navList = [
     href: '/online',
   },
   {
-    label: 'Nutrición ',
-    href: '/nutricion',
+    label: 'Zona  ALMA ',
+    href: '/zona-alma',
   },
   {
     label: 'Contacto',
