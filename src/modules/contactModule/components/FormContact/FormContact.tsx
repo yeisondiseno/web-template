@@ -21,7 +21,7 @@ const FormContact = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='module-contact-form-contact'
+      className='module-contact-form-contact fade-in-scroll-left'
     >
       <Input
         placeholder='Ingrese su nombre completo'

@@ -22,7 +22,9 @@ const AboutUsSection = () => {
           </p>
         </div>
         <div className='module-home-about-us-right'>
-          <h3 className='font-border black'>ELEVA TU POTENCIAL</h3>
+          <h3 className='font-border black fade-in-scroll-right'>
+            ELEVA TU POTENCIAL
+          </h3>
         </div>
       </article>
 

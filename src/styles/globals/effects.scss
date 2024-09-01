@@ -1,6 +1,89 @@
+@import '../variables/index.scss';
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.fade-in {
+  animation-duration: 0.8s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+
+.fade-in-right {
+  animation-duration: 0.8s;
+  animation-name: animate-fade-right;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.fade-in-scroll {
+  animation-duration: 0.8s;
+  animation-name: animate-fade;
+  animation-fill-mode: backwards;
+  animation-timeline: --fade;
+  animation-range: entry 25% cover 50%;
+
+  view-timeline-name: --fade;
+  view-timeline-axis: block;
+}
+
+.fade-in-scroll-right {
+  animation-duration: 0.8s;
+  animation-name: animate-fade-right;
+  animation-fill-mode: backwards;
+  animation-timeline: --fade-right;
+  animation-range: entry 25% cover 50%;
+
+  view-timeline-name: --fade-right;
+  view-timeline-axis: block;
+}
+
+.fade-in-scroll-left {
+  animation-duration: 0.8s;
+  animation-name: animate-fade-left;
+  animation-fill-mode: backwards;
+  animation-timeline: --fade-left;
+  animation-range: entry 25% cover 50%;
+
+  view-timeline-name: --fade-left;
+  view-timeline-axis: block;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

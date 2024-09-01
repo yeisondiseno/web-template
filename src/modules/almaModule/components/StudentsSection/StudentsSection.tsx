@@ -10,8 +10,8 @@ const StudentsSection = () => {
       <div className='module-alma-students-content max-block'>
         <div>
           {contentList.map(({ title, text, icon }) => (
-            <aside key={title}>
-              <header className='module-alma-students-content-card'>
+            <aside key={title} className='fade-in-scroll-left'>
+              <header className='module-alma-students-content-card '>
                 <i>{icon}</i>
                 <h2 className='black'>{title}</h2>
               </header>
