@@ -24,7 +24,11 @@ const PlansSection = () => {
           </Link>
         </div>
         <div>
-          <PlanCard header='INTEGRAL DELUXE' footer='$290.000 / Mensual'>
+          <PlanCard
+            header='INTEGRAL DELUXE'
+            footer='$290.000 / Mensual'
+            className='fade-in-scroll'
+          >
             <div className='module-online-plans-content-card'>
               <p>5 clases/semana-20 clases al mes</p>
               <p>Nutrición específica, club de beneficios ONLINE.</p>
@@ -43,7 +47,11 @@ const PlansSection = () => {
           </p>
         </div>
         <div>
-          <PlanCard header='INTEGRAL DELUXE' footer='$150.000 / Mensual'>
+          <PlanCard
+            header='INTEGRAL DELUXE'
+            footer='$150.000 / Mensual'
+            className='fade-in-scroll'
+          >
             <div className='module-online-plans-content-card'>
               <p>3 clases/semana-12 clases al mes.</p>
               <p>Clases por zoom 2a la semana</p>

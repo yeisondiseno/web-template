@@ -34,7 +34,7 @@ const FormSection = () => {
           <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className='module-home-form-form'
+            className='module-home-form-form fade-in-scroll'
           >
             <Input
               placeholder='Ingrese su nombre completo'

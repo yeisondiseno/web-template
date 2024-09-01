@@ -48,7 +48,7 @@
     transform: rotate(-90deg);
 
     @include responsive(tablet) {
-      display: none;
+      display: none !important;
     }
   }
 }

@@ -14,6 +14,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Alma Fitness',
+  robots: 'noindex, nofollow',
+  creator: 'Yeison Montoya',
+  authors: [{ name: ' Yeison Montoya' }],
 };
 
 export default function RootLayout({

@@ -24,7 +24,7 @@ const PlansSection = () => {
           <Button className='fit'>Selecciona tu plan</Button>
         </Link>
       </div>
-      <div className='module-alma-plan-plan-content'>
+      <div className='module-alma-plan-plan-content '>
         {planList.map(({ header, footer, list }) => (
           <PlanCard key={header} header={header} footer={footer}>
             <ul>

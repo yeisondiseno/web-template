@@ -13,9 +13,14 @@ type MainCardSectionType = {
 const MainCardSection = ({ variant }: MainCardSectionType) => {
   return (
     <section className={`o-main-card  ${variant === 'alma' ? 'white' : ''}`}>
-      <div className='max-block'>
-        {secondSectionCard.map(({ label, img, link }) => (
-          <Link href={link} key={label}>
+      <div className='max-block '>
+        {secondSectionCard.map(({ label, img, link }, index) => (
+          <Link
+            href={link}
+            key={label}
+            className='fade-in-scroll'
+            style={{ animationDelay: index % 2 ? '' : '0.3s' }}
+          >
             <MaskCard label={label} src={img} />
           </Link>
         ))}

@@ -34,10 +34,11 @@ const InformationSection = () => {
       <h2 className='black'> DE CONTACTO</h2>
       <hr className='hr' />
       <div className='module-contact-information-content'>
-        {contactList.map(({ icon, title, description }) => (
+        {contactList.map(({ icon, title, description }, index) => (
           <aside
             key={title}
-            className='module-contact-information-content-card'
+            className='module-contact-information-content-card fade-in'
+            style={{ animationDelay: index % 2 ? '0.8s' : '' }}
           >
             <i>{icon}</i>
             <div className='module-contact-information-content-card-text'>
