@@ -53,7 +53,7 @@ export const weekSchedule = [
     <Check key={key} />,
     <Check key={key} />,
     <Check key={key} />,
-    <Close key={key} />,
+    <Check key={key} />,
     <Close key={key} />,
   ],
   [
@@ -112,7 +112,7 @@ export const weekSchedule = [
     <Check key={key} />,
     <Check key={key} />,
     <Check key={key} />,
-    <Check key={key} />,
+    <Close key={key} />,
     <Close key={key} />,
     <Close key={key} />,
   ],
@@ -326,7 +326,7 @@ export const listDrop = [
     },
     {
       time: '7:00PM',
-      icon: <Check key={key} />,
+      icon: <Close key={key} />,
     },
   ],
   [
@@ -344,7 +344,7 @@ export const listDrop = [
     },
     {
       time: '8:00AM',
-      icon: <Close key={key} />,
+      icon: <Check key={key} />,
     },
     {
       time: '9:00AM',
