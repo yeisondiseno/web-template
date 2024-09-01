@@ -3,27 +3,28 @@
 
 .o-hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  text-shadow: $text-shadow;
+
+  text-align: center;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @include responsive(desktop) {
-    text-align: center;
     height: 31.25rem;
   }
 
   @include responsive(mobile) {
-    text-align: center;
     height: 15.625rem;
   }
 
   h1 {
     font-size: 5.5rem;
+    text-shadow: $text-shadow;
 
     @include responsive(tablet) {
       font-size: 3.125rem;
