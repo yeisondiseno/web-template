@@ -1,0 +1,29 @@
+@import '../styles/mixins/globalMixins.scss';
+@import '../styles/variables/index.scss';
+
+.p-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include responsive(mobile) {
+    padding: 0 1rem;
+    height: 25.75rem;
+  }
+
+  h1 {
+    font-size: 6.25rem;
+    margin-bottom: 0;
+
+    @include responsive(mobile) {
+      font-size: 3.75rem;
+    }
+  }
+}
