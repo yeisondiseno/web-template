@@ -3,7 +3,7 @@ import React from 'react';
 // Libraries
 import { useForm, SubmitHandler } from 'react-hook-form';
 // Components
-import { Input, Button } from '@components/index';
+import { Input, Button, Cover } from '@components/index';
 // Styles
 import './FormSection.scss';
 
@@ -28,7 +28,7 @@ const FormSection = () => {
       className='module-home-form'
       style={{ backgroundImage: `url('/assets/img/home-form.png')` }}
     >
-      <div className='module-home-form-cover' />
+      <Cover direction='r-l' />
       <div className='module-home-form-module max-block'>
         <div className='module-home-form-content'>
           <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>

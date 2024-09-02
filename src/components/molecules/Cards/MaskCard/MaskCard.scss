@@ -12,6 +12,11 @@
   width: 100%;
   margin-top: -5rem;
   color: $white;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-1.25rem);
+  }
 
   @include responsive(tablet) {
     min-width: auto;

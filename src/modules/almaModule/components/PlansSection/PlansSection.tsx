@@ -11,7 +11,7 @@ import './PlansSection.scss';
 const PlansSection = () => {
   return (
     <section className='module-alma-plan max-block'>
-      <div className='module-alma-plan-description'>
+      <div className='module-alma-plan-description' id='plans'>
         <h3 className='light'>PLAN INTEGRAL</h3>
         <h3 className=''>PLANES Y SEVICIOS</h3>
         <hr className='hr' />

@@ -7,6 +7,10 @@
   padding-bottom: 7.5rem;
   padding-top: 1rem;
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
   &-content {
     display: flex;
     flex-direction: column;

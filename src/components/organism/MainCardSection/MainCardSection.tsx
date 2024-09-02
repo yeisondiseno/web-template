@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 // Constant
-import { secondSectionCard } from '@modules/homeModule/constants/homeConstants';
+import {
+  cardsHome,
+  cardsAlma,
+  CardsType,
+} from '@modules/homeModule/constants/homeConstants';
 import { MaskCard } from '@components/index';
 // Style
 import './MainCardSection.scss';
@@ -11,10 +15,13 @@ type MainCardSectionType = {
 };
 
 const MainCardSection = ({ variant }: MainCardSectionType) => {
+  // Data
+  const cardDataToMap: CardsType[] = variant === 'home' ? cardsHome : cardsAlma;
+
   return (
     <section className={`o-main-card  ${variant === 'alma' ? 'white' : ''}`}>
       <div className='max-block '>
-        {secondSectionCard.map(({ label, img, link }, index) => (
+        {cardDataToMap.map(({ label, img, link }, index) => (
           <Link
             href={link}
             key={label}
