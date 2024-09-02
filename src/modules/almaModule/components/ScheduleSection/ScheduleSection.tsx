@@ -11,7 +11,7 @@ const daysNotFirstElement = days.slice(1);
 const ScheduleSection = () => {
   return (
     <section className='module-alma-schedule bg-white'>
-      <div className='max-block'>
+      <div className='max-block' id='schedule'>
         <h3 className='light italic'>CONOCE</h3>
         <h3 className='black'>NUESTROS HORARIOS</h3>
         <p className='module-alma-schedule-text'>

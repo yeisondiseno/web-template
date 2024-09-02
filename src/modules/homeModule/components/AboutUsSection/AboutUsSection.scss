@@ -8,8 +8,16 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include responsive(tablet) {
+    background-position: bottom;
+  }
+
   &-container {
     display: flex;
+
+    & > div {
+      position: relative;
+    }
 
     @include responsive(tablet) {
       flex-direction: column;
@@ -18,7 +26,7 @@
 
   &-right {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     width: 80%;
@@ -31,9 +39,10 @@
     }
 
     h3 {
-      font-size: 5.8125rem;
+      font-size: 4.5625rem;
       width: min-content;
       line-height: 1;
+      text-align: end;
 
       @include responsive(desktop) {
         font-size: 2.5rem;

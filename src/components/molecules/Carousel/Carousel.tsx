@@ -1,5 +1,5 @@
 'use client';
-import React, { Children, ReactNode, useMemo, useCallback } from 'react';
+import React, { Children, ReactNode, useMemo } from 'react';
 // Libraries
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';

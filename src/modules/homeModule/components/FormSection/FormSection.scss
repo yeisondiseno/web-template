@@ -26,22 +26,6 @@
     }
   }
 
-  &-cover {
-    position: absolute;
-    inset: 0;
-    background: $bg;
-    background: linear-gradient(
-      270deg,
-      rgba($bg, 1) 0%,
-      rgba($bg, 1) 40%,
-      rgba($bg, 0) 65%
-    );
-
-    @include responsive(mobile) {
-      display: none;
-    }
-  }
-
   &-content {
     z-index: 1;
 

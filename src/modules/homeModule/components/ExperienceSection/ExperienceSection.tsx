@@ -11,7 +11,10 @@ import './ExperienceSection.scss';
 
 const ExperienceSection = () => {
   return (
-    <section className='module-home-experience '>
+    <section
+      className='module-home-experience '
+      style={{ backgroundImage: `url('/assets/img/home/experience.png')` }}
+    >
       <div className='module-home-experience-content max-block'>
         <h3 className='italic light'>CONOCE Y VIVE</h3>
         <h3>LA EXPERIECIA AMLA</h3>

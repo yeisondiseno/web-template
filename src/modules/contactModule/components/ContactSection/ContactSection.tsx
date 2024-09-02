@@ -17,7 +17,7 @@ const ContactSection = () => {
           </div>
           <div className='module-contact-contact-content-img'>
             <Image
-              src={'/assets/img/slide-gallery/2.png'}
+              src={'/assets/img/contact/form.jpg'}
               alt={''}
               width={446}
               height={616}

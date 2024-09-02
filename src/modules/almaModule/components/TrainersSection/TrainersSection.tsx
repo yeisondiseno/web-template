@@ -10,7 +10,10 @@ const TrainersSection = () => {
   return (
     <section className='module-alma-trainers'>
       <div className='bg-white'>
-        <div className='module-alma-trainer-titles max-block bg-white'>
+        <div
+          className='module-alma-trainer-titles max-block bg-white'
+          id='trainers'
+        >
           <h3 className='light italic'>¡CONOCE A</h3>
           <h3 className='black'>NUESTROS ENTRENADORES¡</h3>
           <p>

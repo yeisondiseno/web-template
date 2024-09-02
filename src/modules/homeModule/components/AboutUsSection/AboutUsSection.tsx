@@ -1,6 +1,6 @@
 import React from 'react';
 // Components
-import { Divider } from '@components/index';
+import { Divider, Cover } from '@components/index';
 // Styles
 import './AboutUsSection.scss';
 
@@ -11,6 +11,7 @@ const AboutUsSection = () => {
       style={{ backgroundImage: 'url("/assets/img/home_fit.png")' }}
     >
       <article className='module-home-about-us-container max-block'>
+        <Cover direction='l-r' />
         <div>
           <h2 className='module-home-about-us-title'>Nosotros</h2>
           <h3 className='module-home-about-us-sub-title'>ESPACIO INTEGRAL</h3>
