@@ -2,6 +2,10 @@
 @import '../../../styles/mixins/globalMixins.scss';
 
 .a-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   color: $white;
   background-color: $primary;
   border: none;
@@ -9,6 +13,7 @@
   font-size: 0.8rem;
   padding: 15px 32px;
   box-shadow: $shadow;
+  text-decoration: none;
   cursor: pointer;
 
   transition: $transition ease-in-out;

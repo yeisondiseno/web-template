@@ -1,6 +1,10 @@
 @import '../variables/index.scss';
 @import '../mixins/globalMixins.scss';
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 3.8125rem;
 }

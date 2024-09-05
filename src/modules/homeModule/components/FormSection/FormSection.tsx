@@ -2,26 +2,33 @@
 import React from 'react';
 // Libraries
 import { useForm, SubmitHandler } from 'react-hook-form';
+import useSWRMutation from 'swr/mutation';
+// Fetcher
+import { emailFetcher } from '@modules/homeModule/fetchers';
+// Types
+import { HomeFormInputTypes } from '@modules/homeModule/types';
 // Components
-import { Input, Button, Cover } from '@components/index';
+import { Input, Button, Cover, Spinner } from '@components/index';
+
 // Styles
 import './FormSection.scss';
 
-type InputsType = {
-  name: string;
-  email: string;
-  phone: number;
-};
-
 const FormSection = () => {
+  // Fetch
+  const { trigger, isMutating } = useSWRMutation(
+    '/api/send-email',
+    emailFetcher,
+  );
+
+  // Form
   const {
     register,
     handleSubmit,
     // formState: { errors },
-  } = useForm<InputsType>();
+  } = useForm<HomeFormInputTypes>();
 
   // Actions
-  const onSubmit: SubmitHandler<InputsType> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<HomeFormInputTypes> = (data) => trigger(data);
 
   return (
     <section
@@ -32,6 +39,7 @@ const FormSection = () => {
       <div className='module-home-form-module max-block'>
         <div className='module-home-form-content'>
           <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
+
           <form
             onSubmit={handleSubmit(onSubmit)}
             className='module-home-form-form fade-in-scroll'
@@ -49,7 +57,16 @@ const FormSection = () => {
               type='number'
               {...register('phone', { required: true })}
             />
-            <Button type='submit'>ENVIAR</Button>
+            <Button type='submit' disabled={isMutating}>
+              {isMutating ? (
+                <>
+                  ENVIANDO...
+                  <Spinner />
+                </>
+              ) : (
+                'ENVIAR'
+              )}
+            </Button>
           </form>
         </div>
       </div>

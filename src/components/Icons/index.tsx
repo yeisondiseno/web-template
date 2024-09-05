@@ -14,3 +14,4 @@ export { default as Phone } from './Phone';
 export { default as Email } from './Email';
 export { default as Clock } from './Clock';
 export { default as WhatsApp } from './WhatsApp';
+export { default as Spinner } from './Spinner';
