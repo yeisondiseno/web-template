@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, forwardRef } from 'react';
+import React, { ComponentPropsWithoutRef, forwardRef, LegacyRef } from 'react';
 // Libraries
 import sanitizeHtml from 'sanitize-html';
 // Styles
@@ -8,7 +8,7 @@ type InputType = ComponentPropsWithoutRef<'input'>;
 
 const Input = (
   { ...props }: InputType,
-  ref: React.LegacyRef<HTMLInputElement> | undefined,
+  ref: LegacyRef<HTMLInputElement> | undefined,
 ) => {
   // Props
   const { onChange, className } = props;

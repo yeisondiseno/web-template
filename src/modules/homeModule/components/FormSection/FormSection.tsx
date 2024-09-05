@@ -8,24 +8,26 @@ import { emailFetcher } from '@modules/homeModule/fetchers';
 // Types
 import { HomeFormInputTypes } from '@modules/homeModule/types';
 // Components
-import { Input, Button, Cover, Spinner } from '@components/index';
+import { InputGroup, Button, Cover, Spinner } from '@components/index';
 
 // Styles
 import './FormSection.scss';
 
 const FormSection = () => {
   // Fetch
-  const { trigger, isMutating } = useSWRMutation(
-    '/api/send-email',
-    emailFetcher,
-  );
+  const {
+    trigger,
+    isMutating,
+    error: errorSendData,
+  } = useSWRMutation('/api/send-email', emailFetcher);
 
   // Form
   const {
     register,
     handleSubmit,
-    // formState: { errors },
+    formState: { errors },
   } = useForm<HomeFormInputTypes>();
+  console.log('errors', errors);
 
   // Actions
   const onSubmit: SubmitHandler<HomeFormInputTypes> = (data) => trigger(data);
@@ -44,18 +46,32 @@ const FormSection = () => {
             onSubmit={handleSubmit(onSubmit)}
             className='module-home-form-form fade-in-scroll'
           >
-            <Input
+            <InputGroup
               placeholder='Ingrese su nombre completo'
-              {...register('name', { required: true })}
+              error={errors.name?.message}
+              {...register('name', {
+                required: { value: true, message: 'El nombre es requerido' },
+              })}
             />
-            <Input
+            <InputGroup
               placeholder='Ingrese su correo'
-              {...register('email', { required: true })}
+              type='email'
+              error={errors.email?.message}
+              {...register('email', {
+                required: { value: true, message: 'El correo es requerido' },
+              })}
             />
-            <Input
+            <InputGroup
               placeholder='Ingrese su celular'
               type='number'
-              {...register('phone', { required: true })}
+              error={errors.phone?.message}
+              onKeyDown={(e) =>
+                ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()
+              }
+              {...register('phone', {
+                required: { value: true, message: 'El teléfono es requerido' },
+                valueAsNumber: true,
+              })}
             />
             <Button type='submit' disabled={isMutating}>
               {isMutating ? (
