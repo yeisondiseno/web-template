@@ -8,7 +8,7 @@ import { emailFetcher } from '@modules/homeModule/fetchers';
 // Types
 import { HomeFormInputTypes } from '@modules/homeModule/types';
 // Components
-import { InputGroup, Button, Cover, Spinner } from '@components/index';
+import { InputGroup, Button, Cover, Spinner, Alert } from '@components/index';
 
 // Styles
 import './FormSection.scss';
@@ -41,6 +41,12 @@ const FormSection = () => {
       <div className='module-home-form-module max-block'>
         <div className='module-home-form-content'>
           <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
+          {errorSendData && (
+            <Alert status='warning'>
+              <h4>!Error</h4>
+              <p>Error al enviar el correo, por favor intentar más tarde.</p>
+            </Alert>
+          )}
 
           <form
             onSubmit={handleSubmit(onSubmit)}
