@@ -1,6 +1,20 @@
 import { NextResponse, NextRequest } from 'next/server';
+// Libraries
+import nodemailer from 'nodemailer';
+// Config
+import { env } from '@config/env';
 // Types
 import { HomeFormInputTypes } from '@modules/homeModule/types';
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  secure: true,
+  auth: {
+    user: env.emailUserName,
+    pass: env.emailPassword,
+  },
+});
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const getRequest = await req.json();
@@ -19,5 +33,21 @@ export async function POST(req: NextRequest, res: NextResponse) {
       { status: 403 },
     );
 
-  return NextResponse.json({ message: 'Llamado exitoso' });
+  const { email, name, phone } = data;
+  try {
+    await transporter.sendMail({
+      from: '"Message bot"<your@gmail.com>',
+      to: env.emailUserName,
+      subject: `Registro de boletin`,
+      text: `Registrar usuario ${name} con correo ${email} y teléfono ${phone}`,
+    });
+
+    return NextResponse.json({
+      status: 200,
+      message: 'Correo registrado con éxito.',
+    });
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json({ status: 500 });
+  }
 }
