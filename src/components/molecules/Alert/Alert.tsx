@@ -3,7 +3,7 @@ import React, { ComponentPropsWithoutRef, ReactNode } from 'react';
 import './Alert.scss';
 
 type AlertType = ComponentPropsWithoutRef<'div'> & {
-  status: 'alert' | 'warning' | 'info';
+  status: 'error' | 'warning' | 'info';
   children?: ReactNode;
 };
 
@@ -14,7 +14,7 @@ const Alert = ({
   ...props
 }: AlertType) => {
   return (
-    <div className={`m-alert ${className} ${status}`} {...props}>
+    <div className={`m-alert fade-in ${className} ${status}`} {...props}>
       {children}
     </div>
   );

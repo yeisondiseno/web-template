@@ -10,7 +10,7 @@
     "format": "prettier --write --ignore-path .gitignore "
   },
   "dependencies": {
-    "@million/lint": "^1.0.0-rc.76",
+    "@million/lint": "^1.0.0-rc.84",
     "@types/nodemailer": "^6.4.15",
     "axios": "^1.7.7",
     "css-loader": "^7.1.2",

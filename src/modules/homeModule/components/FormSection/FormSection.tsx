@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { use, useState } from 'react';
 // Libraries
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useSWRMutation from 'swr/mutation';
@@ -14,23 +14,30 @@ import { InputGroup, Button, Cover, Spinner, Alert } from '@components/index';
 import './FormSection.scss';
 
 const FormSection = () => {
+  // States
+  const [isSuccess, setIsSuccess] = useState(false);
+
   // Fetch
   const {
     trigger,
     isMutating,
     error: errorSendData,
-  } = useSWRMutation('/api/send-email', emailFetcher);
+  } = useSWRMutation('send-email-register', emailFetcher);
 
   // Form
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<HomeFormInputTypes>();
-  console.log('errors', errors);
 
   // Actions
-  const onSubmit: SubmitHandler<HomeFormInputTypes> = (data) => trigger(data);
+  const onSubmit: SubmitHandler<HomeFormInputTypes> = (data) =>
+    trigger(data).then(() => {
+      setIsSuccess(true);
+      reset();
+    });
 
   return (
     <section
@@ -41,8 +48,15 @@ const FormSection = () => {
       <div className='module-home-form-module max-block'>
         <div className='module-home-form-content'>
           <h2 className='bold'>REGITRATE A NUETRO BOLETÍN</h2>
+          {isSuccess && (
+            <Alert status='info'>
+              <h4>Enviado</h4>
+              <p>Su correo ha sido registrado con éxito.</p>
+            </Alert>
+          )}
+
           {errorSendData && (
-            <Alert status='warning'>
+            <Alert status='error'>
               <h4>!Error</h4>
               <p>Error al enviar el correo, por favor intentar más tarde.</p>
             </Alert>
@@ -76,6 +90,10 @@ const FormSection = () => {
               }
               {...register('phone', {
                 required: { value: true, message: 'El teléfono es requerido' },
+                minLength: {
+                  value: 7,
+                  message: 'El largo mínimo es de 7 dígitos',
+                },
                 valueAsNumber: true,
               })}
             />

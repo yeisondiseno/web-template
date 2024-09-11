@@ -18,7 +18,13 @@
     margin-bottom: 0.5rem;
   }
 
-  &.warning {
+  &.info {
+    color: $info;
+    background-color: lighten($color: $info, $amount: 55%);
+    border: solid 1px $info;
+  }
+
+  &.error {
     color: $error;
     background-color: lighten($color: $error, $amount: 35%);
     border: solid 1px $error;
