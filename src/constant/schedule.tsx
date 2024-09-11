@@ -1,8 +1,9 @@
 // Icons
 import { Check, Close } from '@/components';
+import { randomUUID } from 'crypto';
 
 // Key
-const key = new Date().toString();
+const key = randomUUID?.();
 
 export const days = [
   'Horario',

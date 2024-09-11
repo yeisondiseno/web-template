@@ -10,15 +10,19 @@
     "format": "prettier --write --ignore-path .gitignore "
   },
   "dependencies": {
-    "@million/lint": "^1.0.0-rc.76",
+    "@million/lint": "^1.0.0-rc.84",
+    "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.7",
     "css-loader": "^7.1.2",
     "embla-carousel-react": "^8.1.8",
     "next": "14.2.4",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2",
     "sanitize-html": "^2.13.0",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -7,3 +7,4 @@ export { default as SocialList } from './SocialList/SocialList';
 export { default as Table } from './Table/Table';
 export * from './Cards/index';
 export { default as DropDown } from './DropDown/DropDown';
+export { default as Alert } from './Alert/Alert';
