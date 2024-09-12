@@ -1,12 +1,9 @@
 // Libraries
 import axios from 'axios';
 // Types
-import { HomeFormInputTypes } from '@modules/homeModule/types';
+import { EmailFetcherType } from '../dto/email.dto';
 
-export const emailFetcher = (
-  url: string,
-  { arg }: { arg: HomeFormInputTypes },
-) =>
+export const emailFetcher = (url: string, { arg }: { arg: EmailFetcherType }) =>
   axios
     .post(url, { body: JSON.stringify(arg) })
     .then((res) => res.data)

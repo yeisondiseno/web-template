@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useSWRMutation from 'swr/mutation';
 // Fetcher
-import { emailFetcher } from '@modules/homeModule/fetchers';
+import { emailFetcher } from '@/services/fetchers';
 // Types
 import { HomeFormInputTypes } from '@modules/homeModule/types';
 // Components

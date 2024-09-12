@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useSWRMutation from 'swr/mutation';
 // Fetcher
-import { emailFetcher } from '@modules/homeModule/fetchers';
+import { emailFetcher } from '@services/fetchers';
 // Components
 import {
   InputGroup,
@@ -14,7 +14,7 @@ import {
   Alert,
 } from '@components/index';
 // Types
-import { ContactFormInputType } from '@modules/homeModule/types';
+import { ContactFormInputType } from '@modules/contactModule/types';
 // Styles
 import './FormContact.scss';
 
@@ -36,7 +36,6 @@ const FormContact = () => {
     reset,
     formState: { errors },
   } = useForm<ContactFormInputType>();
-  console.log('errors: ', errors);
 
   // Actions
   const onSubmit: SubmitHandler<ContactFormInputType> = (data) =>

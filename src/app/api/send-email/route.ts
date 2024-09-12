@@ -1,10 +1,11 @@
 import { NextResponse, NextRequest } from 'next/server';
 // Libraries
 import nodemailer from 'nodemailer';
+import sanitizeHtml from 'sanitize-html';
 // Config
 import { env } from '@config/env';
 // Types
-import { HomeFormInputTypes } from '@modules/homeModule/types';
+import { EmailFetcherType } from '@services/dto/email.dto';
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -18,8 +19,7 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const getRequest = await req.json();
-  const data: HomeFormInputTypes = JSON.parse(getRequest?.body);
-  console.log('data: ', data);
+  const data: EmailFetcherType = JSON.parse(getRequest?.body);
 
   if (!data)
     return NextResponse.json(
@@ -33,13 +33,15 @@ export async function POST(req: NextRequest, res: NextResponse) {
       { status: 403 },
     );
 
-  const { email, name, phone } = data;
+  const { email, name, phone, message } = data;
   try {
     await transporter.sendMail({
       from: '"Message bot"<your@gmail.com>',
       to: env.emailUserName,
-      subject: `Registro de boletin`,
-      text: `Registrar usuario ${name} con correo ${email} y teléfono ${phone}`,
+      subject: message ? 'Contacto' : `Registro de boletin`,
+      text: message
+        ? `usuario ${sanitizeHtml(name)} con correo ${sanitizeHtml(email)} y teléfono ${phone}. Mensaje: ${sanitizeHtml(message)}`
+        : `Registrar usuario ${sanitizeHtml(name)} con correo ${sanitizeHtml(email)} y teléfono ${phone}`,
     });
 
     return NextResponse.json({
