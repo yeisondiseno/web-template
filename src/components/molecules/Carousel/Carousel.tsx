@@ -6,11 +6,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 // Hooks
 import { useViewportSize } from '@hooks/index';
 // Components
-import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons,
-} from './CarrouselArrowButtons';
+import { PrevButton, NextButton } from './CarrouselArrowButtons';
+import { usePrevNextButtons } from './usePrevNextButtons';
 // Styles
 import './Carousel.scss';
 
