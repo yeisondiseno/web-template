@@ -1,5 +1,5 @@
 'use client';
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 // Libraries
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useSWRMutation from 'swr/mutation';
@@ -69,6 +69,7 @@ const FormSection = () => {
             <InputGroup
               placeholder='Ingrese su nombre completo'
               error={errors.name?.message}
+              id='name'
               {...register('name', {
                 required: { value: true, message: 'El nombre es requerido' },
               })}
@@ -76,6 +77,7 @@ const FormSection = () => {
             <InputGroup
               placeholder='Ingrese su correo'
               type='email'
+              id='email'
               error={errors.email?.message}
               {...register('email', {
                 required: { value: true, message: 'El correo es requerido' },
@@ -84,6 +86,7 @@ const FormSection = () => {
             <InputGroup
               placeholder='Ingrese su celular'
               type='number'
+              id='phone'
               error={errors.phone?.message}
               onKeyDown={(e) =>
                 ['e', 'E', '+', '-'].includes(e.key) && e.preventDefault()

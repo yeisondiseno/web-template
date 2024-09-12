@@ -19,7 +19,7 @@ const InputGroup = (
   return (
     <div className='m-input-group'>
       {label && <label htmlFor={id}>{label}</label>}
-      <Input ref={ref} {...props} />
+      <Input ref={ref} id={id} {...props} />
       {error && <span className='m-input-group-error'>{error}</span>}
     </div>
   );
