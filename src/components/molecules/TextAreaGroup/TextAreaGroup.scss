@@ -1,0 +1,14 @@
+@import '../../../styles/variables/index.scss';
+@import '../../../styles/mixins/globalMixins.scss';
+
+.m-text-area-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &-error {
+    font-size: 0.75rem;
+    color: $error;
+    margin-bottom: 0.5rem;
+  }
+}
