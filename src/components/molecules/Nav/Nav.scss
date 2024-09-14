@@ -61,7 +61,6 @@
     height: 0.4375rem;
     width: 0;
     background-color: $primary;
-    transform: $skew-x;
     transition: $transition;
 
     @include responsive(tablet) {
