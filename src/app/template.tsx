@@ -7,11 +7,11 @@ import './template.scss';
 
 const Template = ({ children }: { children: ReactNode }) => {
   return (
-    <main>
+    <>
       <Header />
       {children}
       <Footer />
-    </main>
+    </>
   );
 };
 
