@@ -1,7 +1,14 @@
 import React from 'react';
 import { Metadata } from 'next';
 // Components
-import { Button, InputGroup, DropDown, SocialList } from '@/components';
+import {
+  Button,
+  InputGroup,
+  DropDown,
+  SocialList,
+  Carousel,
+  Card,
+} from '@/components';
 
 export const metadata: Metadata = {
   description: '',
@@ -43,6 +50,38 @@ export default function Home() {
       </div>
       <div className='l-flex l-gap'>
         <SocialList />
+      </div>
+      <div className='l-flex l-gap'>
+        <Carousel>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            dolor dicta debitis soluta odit itaque quam molestiae nemo et
+            voluptatem ab cumque, nostrum aut accusantium harum possimus.
+            Assumenda, aliquam reprehenderit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            dolor dicta debitis soluta odit itaque quam molestiae nemo et
+            voluptatem ab cumque, nostrum aut accusantium harum possimus.
+            Assumenda, aliquam reprehenderit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            dolor dicta debitis soluta odit itaque quam molestiae nemo et
+            voluptatem ab cumque, nostrum aut accusantium harum possimus.
+            Assumenda, aliquam reprehenderit.
+          </p>
+        </Carousel>
+      </div>
+      <div className='l-flex l-gap'>
+        <Card>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, veniam
+            iste debitis minima corporis, adipisci quo officiis deserunt
+            excepturi consequuntur assumenda harum odio ab voluptatem. Atque
+            provident explicabo quo temporibus.
+          </p>
+        </Card>
       </div>
     </main>
   );
