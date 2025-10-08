@@ -13,7 +13,7 @@ const useViewportSize = () => {
       return setCurrentViewport((prev) => ({ ...prev, desktop: true }));
     }
 
-    if (currentSize >= 768) {
+    if (currentSize >= 768 && currentSize < 992) {
       return setCurrentViewport((prev) => ({ ...prev, tablet: true }));
     }
 

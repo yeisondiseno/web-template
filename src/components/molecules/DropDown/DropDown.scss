@@ -1,4 +1,17 @@
-@import '../../../styles/variables/index.scss';
+@use '@/styles/variables/index.scss' as *;
+
+.m-drop-down-body {
+  @starting-style {
+    padding: 0px;
+    max-height: 0px;
+  }
+}
+
+.m-drop-down-body.open {
+  @starting-style {
+    padding: 5px;
+  }
+}
 
 .m-drop-down {
   &-header {
@@ -10,7 +23,6 @@
     padding: 1rem 0.625rem;
     background-color: $primary;
     color: $white;
-    margin-bottom: 1px;
 
     & > i {
       display: flex;
@@ -27,11 +39,28 @@
   }
 
   &-body {
-    padding: 5px;
-    display: none;
+    display: block;
+    overflow-y: hidden;
+    transition:
+      max-height 0.3s ease,
+      height 0.3s allow-discrete,
+      padding 0.3s ease;
+    transition-behavior: allow-discrete;
+    max-height: 0px;
+    padding: 0;
 
     &.open {
-      display: block;
+      transition:
+        max-height 0.3s ease,
+        height 0.3s,
+        padding 0.3s ease;
+      transition-behavior: allow-discrete;
+      max-height: 100%;
+      padding: 5px;
     }
+  }
+
+  &-body-content {
+    margin-top: 0.5rem;
   }
 }

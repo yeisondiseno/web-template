@@ -14,7 +14,7 @@ type ModalType = {
 const Modal = ({ open = false, handledOpen, children }: ModalType) => {
   return (
     <Portal show={open} id='portal'>
-      <Card className='m-modal max-block internal'>{children}</Card>
+      <Card className='m-modal l-max-block internal'>{children}</Card>
 
       <Cover onClick={() => handledOpen?.()} />
     </Portal>

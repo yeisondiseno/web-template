@@ -1,6 +1,18 @@
 @import '../variables/index.scss';
 
-.max-block {
+.l-flex {
+  display: flex;
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.l-gap {
+  gap: 1rem;
+}
+
+.l-max-block {
   width: -webkit-fill-available;
   max-width: $max-width;
   margin-left: auto;
@@ -12,17 +24,7 @@
   }
 }
 
-.bg-white {
+.l-bg-white {
   background-color: $white;
   color: $black;
-}
-
-.hr {
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid $primary;
-  width: 100%;
-  max-width: 15rem;
-  margin-left: 0;
 }

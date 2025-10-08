@@ -21,7 +21,9 @@ const DropDown = ({ title, children }: DropDownProps) => {
           <ChevronDown />
         </i>
       </button>
-      <div className={`m-drop-down-body ${open && 'open'}`}>{children}</div>
+      <div className={`m-drop-down-body ${open && 'open'}`}>
+        <div className='m-drop-down-body-content'>{children}</div>
+      </div>
     </div>
   );
 };
