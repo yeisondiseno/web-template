@@ -1,7 +1,7 @@
 @import '../variables/index.scss';
 
 @mixin out-line {
-  outline: 2px rgba($primary, 0.5);
+  outline: 2px rgba($c-primary, 0.5);
   outline-style: solid;
   outline-offset: 2px;
 }
