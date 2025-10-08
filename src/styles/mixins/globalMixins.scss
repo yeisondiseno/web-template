@@ -11,13 +11,11 @@
     @media (max-width: $mobile) {
       @content;
     }
-  }
-  @elseif $point == tablet {
+  } @else if $point == tablet {
     @media (max-width: $tablet) {
       @content;
     }
-  }
-  @elseif $point == desktop {
+  } @else if $point == desktop {
     @media (max-width: $desktop) {
       @content;
     }
