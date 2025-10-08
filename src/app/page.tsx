@@ -8,6 +8,7 @@ import {
   SocialList,
   Carousel,
   Card,
+  ImgCSR,
 } from '@/components';
 
 export const metadata: Metadata = {
@@ -75,14 +76,62 @@ export default function Home() {
       </div>
       <div className='l-flex l-gap'>
         <Card>
+          <ImgCSR
+            src={
+              'https://images.unsplash.com/photo-1759772238808-6ce358fab418?q=80&w=1123&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            }
+            alt='Example'
+            width={300}
+            height={250}
+            style={{ width: '100%', objectFit: 'cover' }}
+          />
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, veniam
             iste debitis minima corporis, adipisci quo officiis deserunt
             excepturi consequuntur assumenda harum odio ab voluptatem. Atque
             provident explicabo quo temporibus.
           </p>
+          <Button>More</Button>
+        </Card>
+        <Card>
+          <ImgCSR
+            src={
+              'https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            }
+            alt='Example'
+            width={300}
+            height={250}
+            style={{ width: '100%', objectFit: 'cover' }}
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, veniam
+            iste debitis minima corporis, adipisci quo officiis deserunt
+            excepturi consequuntur assumenda harum odio ab voluptatem. Atque
+            provident explicabo quo temporibus.
+          </p>
+          <Button>More</Button>
+        </Card>
+        <Card>
+          <ImgCSR
+            src={
+              'https://images.unsplash.com/photo-1759221793465-4795ba2eaafc?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            }
+            alt='Example'
+            width={300}
+            height={250}
+            style={{ width: '100%', objectFit: 'cover' }}
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, veniam
+            iste debitis minima corporis, adipisci quo officiis deserunt
+            excepturi consequuntur assumenda harum odio ab voluptatem. Atque
+            provident explicabo quo temporibus.
+          </p>
+          <Button>More</Button>
         </Card>
       </div>
+      <br />
+      <br />
     </main>
   );
 }
