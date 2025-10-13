@@ -1,5 +1,7 @@
 import React from 'react';
+// Next
 import { Metadata } from 'next';
+import Link from 'next/link';
 // Components
 import {
   Button,
@@ -17,12 +19,15 @@ export const metadata: Metadata = {
   description: '',
 };
 
-export default function Home() {
+const HomePage = () => {
   return (
     <main
       className='l-max-block l-flex l-flex-column l-gap'
       style={{ minHeight: '500px', paddingTop: '2rem' }}
     >
+      <div className='l-flex l-gap'>
+        <Link href={'/api/auth/signin'}>Sign In</Link>
+      </div>
       <div className='l-flex l-gap'>
         <Button>Btn 1</Button>
         <Button>Btn 2</Button>{' '}
@@ -86,7 +91,7 @@ export default function Home() {
         <Card>
           <ImgCSR
             src={
-              'https://images.unsplash.com/photo-1759772238808-6ce358fab418?q=80&w=1123&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              'https://images.unsplash.com/photo-1759772238808-6ce358fab418?q=80&w=300h=250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             }
             alt='Example'
             width={300}
@@ -104,7 +109,7 @@ export default function Home() {
         <Card>
           <ImgCSR
             src={
-              'https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              'https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=300&h=250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             }
             alt='Example'
             width={300}
@@ -122,7 +127,7 @@ export default function Home() {
         <Card>
           <ImgCSR
             src={
-              'https://images.unsplash.com/photo-1759221793465-4795ba2eaafc?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              'https://images.unsplash.com/photo-1759221793465-4795ba2eaafc?q=80&w=300&h=250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             }
             alt='Example'
             width={300}
@@ -142,4 +147,6 @@ export default function Home() {
       <br />
     </main>
   );
-}
+};
+
+export default HomePage;
