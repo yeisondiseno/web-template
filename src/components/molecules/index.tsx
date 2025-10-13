@@ -10,3 +10,4 @@ export { default as Alert } from './Alert/Alert';
 export { default as TextAreaGroup } from './TextAreaGroup/TextAreaGroup';
 export { default as Modal } from './Modal/Modal';
 export * from './Img';
+export { default as SigninButton } from './SigninButton/SigninButton';

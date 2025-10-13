@@ -23,6 +23,7 @@ export default function Home() {
       className='l-max-block l-flex l-flex-column l-gap'
       style={{ minHeight: '500px', paddingTop: '2rem' }}
     >
+      <div className='l-flex l-gap'></div>
       <div className='l-flex l-gap'>
         <Button>Btn 1</Button>
         <Button>Btn 2</Button>{' '}
