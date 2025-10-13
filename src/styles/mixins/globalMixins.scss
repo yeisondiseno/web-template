@@ -8,15 +8,15 @@
 
 @mixin responsive($point) {
   @if $point == mobile {
-    @media (max-width: $mobile) {
+    @media (max-width: $l-mobile) {
       @content;
     }
   } @else if $point == tablet {
-    @media (max-width: $tablet) {
+    @media (max-width: $l-tablet) {
       @content;
     }
   } @else if $point == desktop {
-    @media (max-width: $desktop) {
+    @media (max-width: $l-desktop) {
       @content;
     }
   }

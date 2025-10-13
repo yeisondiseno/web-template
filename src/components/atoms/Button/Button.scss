@@ -1,6 +1,8 @@
 @import '../../../styles/variables/index.scss';
 @import '../../../styles/mixins/globalMixins.scss';
 
+$z-rounded: 3rem;
+
 .a-btn {
   display: flex;
   align-items: center;
@@ -11,12 +13,12 @@
   border: none;
   border-radius: 0.3125rem;
   font-size: 0.8rem;
-  padding: 15px 32px;
-  box-shadow: $shadow;
+  padding: 1rem 2rem;
+  box-shadow: $e-shadow;
   text-decoration: none;
   cursor: pointer;
 
-  transition: $transition ease-in-out;
+  transition: $e-transition ease-in-out;
 
   &:hover {
     background-color: darken($color: $c-primary, $amount: 30%);
@@ -27,7 +29,17 @@
     @include out-line;
   }
 
-  &.fit {
+  // Variants
+  &-secondary {
+    background-color: $c-secondary;
+
+    &:hover {
+      background-color: darken($color: $c-secondary, $amount: 10%);
+    }
+  }
+
+  // width
+  &-fit {
     width: fit-content;
 
     @include responsive(mobile) {
@@ -35,7 +47,17 @@
     }
   }
 
-  &.full {
+  &-full {
     width: 100%;
+  }
+
+  &-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $z-rounded;
+    height: $z-rounded;
+    border-radius: 2rem;
+    padding: 0;
   }
 }

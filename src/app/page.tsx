@@ -3,12 +3,14 @@ import { Metadata } from 'next';
 // Components
 import {
   Button,
+  ButtonRounded,
   InputGroup,
   DropDown,
   SocialList,
   Carousel,
   Card,
   ImgCSR,
+  Clock,
 } from '@/components';
 
 export const metadata: Metadata = {
@@ -23,7 +25,13 @@ export default function Home() {
     >
       <div className='l-flex l-gap'>
         <Button>Btn 1</Button>
-        <Button>Btn 2</Button>
+        <Button>Btn 2</Button>{' '}
+        <Button variant='secondary'>Btn secondary</Button>
+      </div>
+      <div className='l-flex l-gap'>
+        <ButtonRounded>
+          <Clock />
+        </ButtonRounded>
       </div>
       <div className='l-flex l-gap'>
         <InputGroup label='Example' />

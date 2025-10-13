@@ -61,7 +61,7 @@
     height: 0.4375rem;
     width: 0;
     background-color: $c-primary;
-    transition: $transition;
+    transition: $e-transition;
 
     @include responsive(tablet) {
       display: none;

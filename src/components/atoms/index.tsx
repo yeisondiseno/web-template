@@ -1,4 +1,5 @@
 export { default as Button } from './Button/Button';
+export { default as ButtonRounded } from './Button/ButtonRounded';
 export { default as Input } from './Input/Input';
 export { default as Portal } from './Portal/Portal';
 export { default as Video } from './Video/Video';

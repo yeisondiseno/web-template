@@ -24,7 +24,7 @@
       align-items: center;
       font-size: 1rem;
 
-      transition: $transition ease-in;
+      transition: $e-transition ease-in;
 
       &.open {
         transform: rotateZ(180deg);
