@@ -1,5 +1,7 @@
 import React from 'react';
+// Next
 import { Metadata } from 'next';
+import Link from 'next/link';
 // Components
 import {
   Button,
@@ -17,13 +19,15 @@ export const metadata: Metadata = {
   description: '',
 };
 
-export default function Home() {
+const HomePage = () => {
   return (
     <main
       className='l-max-block l-flex l-flex-column l-gap'
       style={{ minHeight: '500px', paddingTop: '2rem' }}
     >
-      <div className='l-flex l-gap'></div>
+      <div className='l-flex l-gap'>
+        <Link href={'/api/auth/signin'}>Sign In</Link>
+      </div>
       <div className='l-flex l-gap'>
         <Button>Btn 1</Button>
         <Button>Btn 2</Button>{' '}
@@ -143,4 +147,6 @@ export default function Home() {
       <br />
     </main>
   );
-}
+};
+
+export default HomePage;
