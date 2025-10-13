@@ -17,7 +17,7 @@
     top: 78px;
     right: 0;
     left: 0;
-    background-color: $gray-6;
+    background-color: $c-gray-6;
   }
 
   &-ul {
@@ -39,7 +39,7 @@
   }
 
   &-ul li a {
-    color: $white;
+    color: $c-fonts;
     font-size: 1.0625rem;
     font-weight: bold;
     text-decoration: none;
@@ -47,7 +47,7 @@
 
     @include responsive(tablet) {
       padding: 1.375rem 0;
-      border-bottom: solid 1px $white;
+      border-bottom: solid 1px $c-white;
     }
 
     &:hover .m-nav-ul-mark,
@@ -60,9 +60,8 @@
     display: block;
     height: 0.4375rem;
     width: 0;
-    background-color: $primary;
-    transform: $skew-x;
-    transition: $transition;
+    background-color: $c-primary;
+    transition: $e-transition;
 
     @include responsive(tablet) {
       display: none;

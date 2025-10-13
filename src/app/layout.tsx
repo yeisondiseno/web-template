@@ -3,19 +3,19 @@ import type { Metadata } from 'next';
 // Config
 import { env } from '@config/env';
 // Fonts
-import { Poppins } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 // Styles
 import '@styles/index.scss';
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto',
+  weight: ['100', '300', '400', '500', '700', '900'],
 });
 
 export const metadata: Metadata = {
-  title: 'Alma Fitness',
+  title: 'Web-UI-template',
   robots: env.envMode === 'develop' ? 'noindex, nofollow' : '',
   creator: 'Yeison Montoya',
   authors: [{ name: ' Yeison Montoya' }],
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body className={poppins.className}>
+      <body className={roboto.className}>
         {children}
         <div id='portal' />
       </body>

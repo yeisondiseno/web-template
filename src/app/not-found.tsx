@@ -6,7 +6,7 @@ import './not-found.scss';
 
 export default function NotFound() {
   return (
-    <section
+    <main
       className='p-not-found'
       style={{ backgroundImage: `url('/assets/img/404/404.png')` }}
     >
@@ -18,6 +18,6 @@ export default function NotFound() {
       <Link href='/'>
         <Button>Ir al início</Button>
       </Link>
-    </section>
+    </main>
   );
 }

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer className='o-footer'>
-        <section className='o-footer-content max-block'>
+        <section className='o-footer-content l-max-block'>
           <div>
             <Link href='./' className='o-footer-link'>
               <LogoIcon width={327} />

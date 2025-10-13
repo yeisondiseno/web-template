@@ -1,0 +1,9 @@
+@import '../../../styles/variables/index.scss';
+
+.a-card {
+  background-color: $c-white;
+  color: $c-font-dark;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: $e-shadow;
+}

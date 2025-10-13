@@ -11,12 +11,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $white;
+    color: $c-fonts;
     transition: 0.3s;
     font-size: 1.625rem;
 
     &:hover {
-      color: $primary;
+      color: $c-primary;
     }
   }
 }

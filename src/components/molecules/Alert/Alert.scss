@@ -19,14 +19,14 @@
   }
 
   &.info {
-    color: $info;
-    background-color: lighten($color: $info, $amount: 55%);
-    border: solid 1px $info;
+    color: $c-info;
+    background-color: lighten($color: $c-info, $amount: 55%);
+    border: solid 1px $c-info;
   }
 
   &.error {
-    color: $error;
-    background-color: lighten($color: $error, $amount: 35%);
-    border: solid 1px $error;
+    color: $c-error;
+    background-color: lighten($color: $c-error, $amount: 35%);
+    border: solid 1px $c-error;
   }
 }

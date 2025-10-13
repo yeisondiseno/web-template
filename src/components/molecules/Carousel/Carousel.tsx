@@ -59,13 +59,13 @@ const Carousel = ({
   const handledSpacing = useMemo(() => spacing ?? 0, [spacing]);
 
   return (
-    <section className='m-carousel'>
+    <div className='m-carousel'>
       <PrevButton
         onClick={onPrevButtonClick}
         disabled={prevBtnDisabled}
         aria-label='Ir imágen anterior'
       />
-      <section className={`m-carousel-embla `}>
+      <div className={`m-carousel-embla `}>
         <div className='m-carousel-embla__viewport' ref={emblaRef}>
           <div
             className='m-carousel-embla__container'
@@ -87,13 +87,13 @@ const Carousel = ({
             ))}
           </div>
         </div>
-      </section>
+      </div>
       <NextButton
         onClick={onNextButtonClick}
         disabled={nextBtnDisabled}
         aria-label='Ir a siguiente imágen'
       />
-    </section>
+    </div>
   );
 };
 

@@ -1,4 +1,10 @@
-import React, { ComponentPropsWithoutRef, forwardRef, LegacyRef } from 'react';
+'use client';
+import React, {
+  ComponentPropsWithoutRef,
+  forwardRef,
+  Ref,
+  ChangeEvent,
+} from 'react';
 // Libraries
 import sanitizeHtml from 'sanitize-html';
 // Styles
@@ -8,18 +14,18 @@ type InputType = ComponentPropsWithoutRef<'input'>;
 
 const Input = (
   { ...props }: InputType,
-  ref: LegacyRef<HTMLInputElement> | undefined,
+  ref: Ref<HTMLInputElement> | undefined,
 ) => {
   // Props
-  const { onChange, className } = props;
+  const { onChange, className } = props ?? {};
 
   // Actions
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     e.target.value = sanitizeHtml(e.target.value);
     onChange?.(e);
   };
 
-  delete props.onChange;
+  delete props?.onChange;
 
   return (
     <input

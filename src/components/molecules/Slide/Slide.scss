@@ -7,7 +7,7 @@
   right: -34.375rem;
   bottom: 0;
   z-index: 10;
-  background-color: $bg-slide;
+  background-color: $c-bg-slide;
   width: 100%;
   max-width: 30.5625rem;
   padding: 5.625rem 2.625rem 2.625rem 2.625rem;
@@ -24,7 +24,7 @@
     border: none;
     font-size: 2.1875rem;
     padding: 0.5rem;
-    color: $gray-3;
+    color: $c-gray-3;
     transition: 0.3s;
     opacity: 0;
 
@@ -33,7 +33,7 @@
     animation-delay: 0.3s;
 
     &:hover {
-      color: $primary;
+      color: $c-primary;
     }
   }
 }

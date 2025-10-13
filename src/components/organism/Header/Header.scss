@@ -2,9 +2,7 @@
 @import '../../../styles/mixins/globalMixins.scss';
 
 .o-header {
-  position: absolute;
-  margin-top: 2.5rem;
-
+  padding-block: 2.5rem;
   width: 100%;
   z-index: 1;
 
@@ -12,7 +10,7 @@
     position: relative;
     margin-top: 0;
     padding: 1rem 0;
-    background-color: $bg-slide;
+    background-color: $c-bg-slide;
   }
 
   &-container {
