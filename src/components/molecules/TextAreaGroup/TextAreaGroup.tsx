@@ -1,4 +1,5 @@
-import React, { ComponentPropsWithoutRef, forwardRef, LegacyRef } from 'react';
+'use client';
+import React, { ComponentPropsWithoutRef, forwardRef, Ref } from 'react';
 // Atoms
 import { TextArea } from '@components/atoms/index';
 // Styles
@@ -11,7 +12,7 @@ type TextGroupType = ComponentPropsWithoutRef<'textarea'> & {
 
 const TextAreaGroup = (
   { label, error, ...props }: TextGroupType,
-  ref: LegacyRef<HTMLTextAreaElement> | undefined,
+  ref: Ref<HTMLTextAreaElement> | undefined,
 ) => {
   // Props
   const { id } = props;

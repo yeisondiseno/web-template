@@ -24,7 +24,7 @@
 
   h1 {
     font-size: 5.5rem;
-    text-shadow: $text-shadow;
+    text-shadow: $e-text-shadow;
 
     @include responsive(tablet) {
       font-size: 3.125rem;

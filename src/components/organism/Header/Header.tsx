@@ -7,7 +7,7 @@ import './Header.scss';
 
 const Header = () => (
   <header className='o-header'>
-    <div className='o-header-container max-block'>
+    <div className='o-header-container l-max-block'>
       <Link href='./' aria-label='Logo Alma'>
         <LogoIcon width={241} aria-hidden='true' />
       </Link>

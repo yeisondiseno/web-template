@@ -1,4 +1,5 @@
-import React, { ComponentPropsWithoutRef, forwardRef, LegacyRef } from 'react';
+'use client';
+import React, { ComponentPropsWithoutRef, forwardRef, Ref } from 'react';
 // Atoms
 import { Input } from '@components/atoms/index';
 // Styles
@@ -11,7 +12,7 @@ type InputGroupType = ComponentPropsWithoutRef<'input'> & {
 
 const InputGroup = (
   { label, error, ...props }: InputGroupType,
-  ref: LegacyRef<HTMLInputElement> | undefined,
+  ref: Ref<HTMLInputElement> | undefined,
 ) => {
   // Props
   const { id } = props;

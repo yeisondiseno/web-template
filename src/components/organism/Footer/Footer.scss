@@ -2,7 +2,7 @@
 @import '../../../styles/mixins/globalMixins.scss';
 
 .o-footer {
-  background-color: $gray-9;
+  background-color: $c-gray-3;
 
   p {
     font-size: 1rem;
@@ -58,7 +58,7 @@
 
   &-aside {
     text-align: center;
-    background-color: $black;
+    background-color: $c-black;
     padding: 1.25rem 1rem;
     font-size: 0.75rem;
   }

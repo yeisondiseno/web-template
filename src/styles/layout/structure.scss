@@ -1,0 +1,30 @@
+@import '../variables/index.scss';
+
+.l-flex {
+  display: flex;
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.l-gap {
+  gap: 1rem;
+}
+
+.l-max-block {
+  width: -webkit-fill-available;
+  max-width: $l-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+
+  &-internal {
+    max-width: $l-max-width-internal;
+  }
+}
+
+.l-bg-white {
+  background-color: $c-white;
+  color: $c-black;
+}

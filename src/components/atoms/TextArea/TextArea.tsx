@@ -1,4 +1,5 @@
-import React, { ComponentPropsWithoutRef, forwardRef } from 'react';
+'use client';
+import { ComponentPropsWithoutRef, forwardRef, Ref } from 'react';
 // Libraries
 import sanitizeHtml from 'sanitize-html';
 // Styles
@@ -8,7 +9,7 @@ type TextAreaType = ComponentPropsWithoutRef<'textarea'>;
 
 const TextArea = (
   { ...props }: TextAreaType,
-  ref: React.LegacyRef<HTMLTextAreaElement> | undefined,
+  ref: Ref<HTMLTextAreaElement> | undefined,
 ) => {
   // Props
   const { onChange, className } = props;
