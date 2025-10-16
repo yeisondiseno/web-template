@@ -1,0 +1,27 @@
+@use '../../../styles/variables/index.scss' as *;
+@use '../../../styles/mixins/globalMixins.scss' as *;
+
+.a-select {
+  @include input;
+  appearance: none;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    @include out-line;
+  }
+
+  &-container {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  &-chevron {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    color: $c-gray-900;
+  }
+}

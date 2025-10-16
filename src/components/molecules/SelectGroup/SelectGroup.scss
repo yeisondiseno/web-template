@@ -1,0 +1,13 @@
+@use '../../../styles/variables/index.scss' as *;
+
+.m-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &-error {
+    font-size: 0.75rem;
+    color: $error;
+    margin-bottom: 0.5rem;
+  }
+}
